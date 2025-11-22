@@ -3,108 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>matheus bosc</title>
+<title>Matheus Bosc - Retro Homepage</title>
 <style>
-  /* Reset and basic styles */
+  /* Retro Reset */
   body {
     margin: 0;
-    font-family: "Arial", sans-serif;
-    background: #e0e0ff; /* soft early-2000s background */
+    font-family: "Courier New", Courier, monospace;
+    background: repeating-linear-gradient(
+      45deg,
+      #c0e0ff,
+      #c0e0ff 20px,
+      #fff0c0 20px,
+      #fff0c0 40px
+    );
     color: #000;
   }
 
-  a {
-    text-decoration: none;
-    color: #0000ee;
-  }
-
-  a:hover {
-    color: #ff0000;
-  }
+  a { text-decoration: none; color: #0000ff; font-weight: bold; }
+  a:hover { color: #ff0000; }
 
   /* Header */
   header {
-    background: linear-gradient(to right, #0066cc, #3399ff);
+    background: linear-gradient(to right, #ff6600, #ffcc00);
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    border-bottom: 4px solid #000;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
 
   header h1 {
-    font-size: 24px;
-    margin: 0;
     font-family: "Comic Sans MS", cursive;
+    font-size: 32px;
+    text-shadow: 2px 2px #000;
+    margin: 0;
   }
 
   nav a {
     margin-left: 15px;
-    font-weight: bold;
+    text-shadow: 1px 1px #fff;
   }
 
   /* Hero Section */
   .hero {
-    background: #ffcc66;
+    background: #ff99cc;
     text-align: center;
-    padding: 40px 20px;
-    border-bottom: 3px solid #000;
+    padding: 50px 20px;
+    border: 3px dashed #000;
+    position: relative;
   }
 
   .hero h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    color: #003366;
+    text-shadow: 2px 2px #fff;
   }
 
   .hero p {
-    font-size: 16px;
+    font-size: 18px;
+    color: #000066;
   }
 
   .hero button {
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 20px;
     cursor: pointer;
-    background: #0066cc;
-    color: white;
+    background: #00cc00;
+    color: #fff;
     border: 2px solid #000;
   }
 
   .hero button:hover {
-    background: #3399ff;
+    background: #009900;
   }
 
-  /* Content Grid */
+  /* Grid Boxes */
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     padding: 20px;
+    justify-content: center;
   }
 
   .grid .box {
-    background: #fff;
-    border: 2px solid #000;
+    width: 220px;
+    background: #ffffcc;
+    border: 3px double #000;
     padding: 10px;
     text-align: center;
-    font-size: 14px;
+    box-shadow: 5px 5px #999;
+    position: relative;
+    overflow: hidden;
   }
 
   .grid .box img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #000;
+    width: 100%;
+    border-bottom: 2px solid #000;
     margin-bottom: 5px;
+  }
+
+  .grid .box marquee {
+    font-size: 12px;
+    color: #ff0000;
+    margin-top: 5px;
   }
 
   /* Footer */
   footer {
-    background: #0066cc;
-    color: white;
+    background: linear-gradient(to right, #3366ff, #33ccff);
+    color: #fff;
     text-align: center;
-    padding: 10px;
-    border-top: 3px solid #000;
-    margin-top: 20px;
+    padding: 15px;
+    border-top: 4px solid #000;
+    font-size: 12px;
+    text-shadow: 1px 1px #000;
   }
 </style>
 </head>
@@ -123,35 +138,41 @@
 
 <section class="hero">
   <h2>Welcome to My Retro Space!</h2>
-  <p>Step back into the early 2000s web vibe.</p>
-  <button onclick="alert('Explore my projects!')">Explore Projects</button>
+  <p>Explore my chaotic, early 2000s-inspired world!</p>
+  <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Retro GIF" width="120">
+  <br>
+  <button onclick="alert('Projects coming soon!')">Explore Projects</button>
 </section>
 
 <section class="grid">
   <div class="box">
-    <img src="https://via.placeholder.com/150" alt="Project 1">
+    <img src="https://via.placeholder.com/200x120?text=Project+1" alt="Project 1">
     <strong>Project 1</strong>
-    <p>Short description of the project.</p>
+    <p>Check out my amazing work!</p>
+    <marquee scrollamount="3">New!</marquee>
   </div>
   <div class="box">
-    <img src="https://via.placeholder.com/150" alt="Project 2">
+    <img src="https://via.placeholder.com/200x120?text=Project+2" alt="Project 2">
     <strong>Project 2</strong>
-    <p>Short description of the project.</p>
+    <p>Fun and experimental stuff.</p>
+    <marquee scrollamount="3">Hot!</marquee>
   </div>
   <div class="box">
-    <img src="https://via.placeholder.com/150" alt="Fun Section">
+    <img src="https://via.placeholder.com/200x120?text=Fun+Links" alt="Fun Section">
     <strong>Fun & Extras</strong>
-    <p>Links to photos, blog, or mini-games.</p>
+    <p>Games, photos, and chaos.</p>
+    <marquee scrollamount="2">Click me!</marquee>
   </div>
   <div class="box">
-    <img src="https://via.placeholder.com/150" alt="About Me">
+    <img src="https://via.placeholder.com/200x120?text=About+Me" alt="About Me">
     <strong>About Me</strong>
-    <p>A little introduction and my quirky info.</p>
+    <p>I like coding, retro design, and chaos!</p>
+    <marquee scrollamount="2">Welcome!</marquee>
   </div>
 </section>
 
 <footer>
-  &copy; 2025 Matheus Bosc - Powered by Early 2000s Vibes
+  &copy; 2025 Matheus Bosc - Powered by Retro Chaos Web Design!
 </footer>
 
 </body>
