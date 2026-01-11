@@ -1,0 +1,139 @@
+---
+import Header from "../../components/Header.astro";
+import Sidebar from "../../components/Sidebar.astro";
+---
+
+<!doctype html>
+<html>
+  <Header title="Last Ember | Matheus Boscariol" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="software-development" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a
+              href="/software-development"
+              class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Last Ember</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+
+
+                <div class="single-item">
+                  
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/Last-Ember"
+                        >Github Page</a>
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://matheusboscariol.itch.io/last-ember"
+                        >Itch.Io Page</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="single-item">
+                  <p>
+                    Last Ember is a simple game where you control a caveman trying to survive. You need to keep the fire alive to keep warm and have light.
+                  </p>
+                  
+                </div>
+
+                <div class="single-item">
+                  <h3>The Jam</h3>
+                  <p>
+                    I made this game in 7 days for the 2026 Brainless Mini-Game Jam.
+                  </p>
+                  <p>
+                    The point of this game jam is to make a small, but polished game to keep you from scope-creeping.
+                    The theme this year was <i>Simpler Times</i>. After learning the theme, I looked around the community for people looking to team up.
+                    I teamed up with 2 people and we got to work.
+                  </p>
+                </div>
+                
+
+                <div class="single-item">
+                  <h3>The Game</h3>
+                  <p>
+                    We planned out a simple game where you had a fire and you had to feed wood to it to keep it alive.
+                    While planning we also thought of things like events, and animals that try to attack your fire.
+                  </p>
+                  <p>
+                    After planning, I began development on Sunday, January 4th, 2026. I started out with some basic art, using only primitive shapes like squares
+                    and triangles. I developed the fire system, sticks and stick spawning. I then began developing the event system. It wasnt too complicated. 
+                  </p>
+                  
+                  <p>
+                    After that, I got sick of the programmer art and decided to draw some myself since we didnt have artists in our team.
+                    Even though im not much of an artist, it still turned out pretty good. The art took close to 12 hours to finish. 
+                    When I finished drawing, I added all of the art to the game and the player animation as well.
+                  </p>
+                  <p>
+                    When I finished the art I got back to work on implementing more features. I added the UI, wind, refined some of the features, added the main menu,
+                    pause menu. One thing we did scrap was the animals because it would be too complicated (and I was sick of drawing, especially when i needed like 
+                    20 sprites for the animations for EACH animal). After that I created a page on itch.io and uploaded a build. But I noticed something was missing.
+                  </p>
+                  <p>
+                    After uploading, I thought that there wasnt really a goal in the game. I thought about old arcade machines, their goal was just to get the highest
+                    score on the leaderboard. So taking a page out of their book I added a leaderboard. Those who survive the longest make it high up on the leaderboard (
+                    my score was 4:30 minutes, but I got rid of it cause it was kind of unfair since in the dev).
+                  </p>
+                </div>
+
+                <div class="single-item">
+                      <a href="/assets/projects/last-ember/normal.png"><img class="project-display" src="/assets/projects/last-ember/normal.png" style="max-width: 49.5%;"></a>
+                      <a href="/assets/projects/last-ember/rain.png"><img class="project-display" src="/assets/projects/last-ember/rain.png" style="max-width: 49.5%;"></a>
+                </div>
+
+                <div class="single-item">
+                  <h3>The Results</h3>
+                  <p>
+                    Now the game is done. In between adding features, my team was sending music and sound effects and I was implementing them. After uploading the
+                    final build I also posted the link on a ton of discord servers to show it off and get some plays and 
+                  </p>
+                  <p>
+                    The judging is still in progress, so I dont know what place im gonna get. Ill update this when I get the results.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                      <a href="/assets/projects/last-ember/wind.png"><img class="project-display" src="/assets/projects/last-ember/wind.png" style="max-width: 49.5%;"></a>
+                      <a href="/assets/projects/last-ember/menu.png"><img class="project-display" src="/assets/projects/last-ember/menu.png" style="max-width: 49.5%;"></a>
+                </div>
+
+                <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/Last-Ember"
+                        >Github Page</a>
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://matheusboscariol.itch.io/last-ember"
+                        >Itch.Io Page</a>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
