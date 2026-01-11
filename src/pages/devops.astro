@@ -49,6 +49,7 @@ const projects = [
                 <div class="resouce-items">
                     {projects.map(project => (
                       <Project 
+                        link={project.link}
                         title={project.title} 
                         desc={project.desc}
                         tech={project.tech}
