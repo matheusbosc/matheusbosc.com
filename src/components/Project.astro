@@ -1,9 +1,9 @@
 ---
-const { title, desc, tech } = Astro.props;
+const { title, desc, tech, link} = Astro.props;
 ---
 
 <div class="single-item">
-  <h3>{title}</h3>
+  <h3><a href={link}>{title}</a></h3>
   <div class="project-desc project-desc-list w-richtext">
     <ul role="list">
       {desc.map(item => <li>{item}</li>)}
