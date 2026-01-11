@@ -1,0 +1,147 @@
+---
+import Header from "../../components/Header.astro";
+import Sidebar from "../../components/Sidebar.astro";
+---
+
+<!doctype html>
+<html>
+  <Header title="Software Development | Sam Bernstein" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="software-development" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a
+              href="/software-development"
+              class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>To-Do App</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+
+
+                <div class="single-item">
+                  
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/todo-app"
+                        >Github Page</a>
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/todo-app/pkgs/container/todo-app"
+                        >GHCR Container</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="single-item">
+                  <p>
+                    To-Do App is a web application built using Python with
+                    Flask. I created this as my final project for Harvard's
+                    CS50x online course.
+                  </p>
+                  
+                </div>
+
+                <div class="single-item">
+                  <h3>About</h3>
+                  <p>
+                    After a few months of work on the course i finally reached my final project. 
+                    I already had programming experience, but I did learn many new things during the course.
+                  </p>
+                  <p>
+                    For the project I wanted to focus on the stuff I had learned and not what I already knew.
+                    I decided to make a web application using Python (which I had already used before) and the web 
+                    framework, Flask. With this in mind I chose to make a simple to-do web app.
+                  </p>
+                </div>
+                
+
+                <div class="single-item">
+                  <h3>Development</h3>
+                  <p>
+                    I started out with a simple idea in mind, just a regular to-do app. You're able to add items, delete items, mark them as done.
+                  </p>
+                  <p>
+                    As I progressed I started to get new ideas, like an account system so users are able to sign up and many people could use the service.
+                    After developing this another thing came to mind, something that many todo applications have; sharing lists. 
+                  </p>
+                  
+                  <p>
+                    I thought this was gonna be hard, but turns out it was pretty easy, just create a page that requires a username and check if that user
+                    has given you access.
+                  </p>
+                  <p>
+                    After completing that it was pretty close to done. All I needed to do was freshen up the UI and add a few convenient features, like
+                    changing your password, deleting your account, clearing your list. Then it was done.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                      <a href="/assets/projects/todo-app/login-page.jpg"><img class="project-display" src="/assets/projects/todo-app/login-page.jpg" style="max-width: 49.5%;"></a>
+                      <a href="/assets/projects/todo-app/my-page.jpg"><img class="project-display" src="/assets/projects/todo-app/my-page.jpg" style="max-width: 49.5%;"></a>
+                </div>
+
+                <div class="single-item">
+                  <h3>A few months later</h3>
+                  <p>
+                    A few months after I finished the course, I was doing another course, this time on LinkedIn Learning.
+                    I was doing a course focused on docker, and I remembered the to-do app. I had been running it manually using flask,
+                    but I have a homelab and I am learning how to make containers, so why not containerize my web app. So thats exactly what I did.
+                  </p>
+                  <p>
+                    After lots of trial and error, I finally got the container working and uploaded the image to the Github Container Repository.
+
+                  </p>
+                </div>
+
+                <div class="single-item">
+                      <a href="/assets/projects/todo-app/other-page.jpg"><img class="project-display" src="/assets/projects/todo-app/other-page.jpg" style="max-width: 49.5%;"></a>
+                      <a href="/assets/projects/todo-app/account-page.jpg"><img class="project-display" src="/assets/projects/todo-app/account-page.jpg" style="max-width: 49.5%;"></a>
+                </div>
+
+                <div class="single-item">
+                  <p>
+                    I put lots of effort into making this web app, but there are still a few things missing. If I were to add more to the project,
+                    one thing I would do is add the ability to create multiple lists. This would definetly complicate the project, and I would
+                    have to change many of core parts of the project, but it would make it so much better.
+                  </p>
+                  
+                </div>
+
+                <div class="single-item">
+                  
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/todo-app"
+                        >Github Page</a>
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/todo-app/pkgs/container/todo-app"
+                        >GHCR Container</a>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>

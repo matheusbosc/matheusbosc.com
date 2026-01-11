@@ -68,6 +68,12 @@ img {
   display: inline-block;
 }
 
+img .project-display {
+  max-width: 20%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
 .w-inline-block {
   max-width: 100%;
   display: inline-block;
