@@ -1,0 +1,214 @@
+---
+import Header from "../../components/Header.astro";
+import Sidebar from "../../components/Sidebar.astro";
+---
+
+<!doctype html>
+<html>
+  <Header title="Homelab | Matheus Boscarop;" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="devops" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/devops" class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Homelab</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+                <div class="single-item">
+                  <p>
+                    December 2nd, 2023, I grabbed a thumb drive and an old
+                    laptop, downloaded and installed ubuntu server, and booted
+                    it up. This was the beginning of a neverending passion of
+                    homelabbing.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                  <h3>The Beginning.</h3>
+                  <p>
+                    It all started on an old laptop with ubuntu server installed
+                    running in a cabinet in my room. I installed docker and a
+                    few containers. I started the server because I wanted to
+                    install Home Assistant and pi-hole to get rid of ads on
+                    Youtube, but now its much more than that.
+                  </p>
+                  <p>
+                    While messing around with it I also discovered Jellyfin. I
+                    installed it, but it wasnt really the best because it was so
+                    manual. But in a few months that would change.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                  <h3>Proxmox</h3>
+                  <p>
+                    March 6th, 2024, I finally decided to uninstall ubuntu and
+                    install something that made it so restarting the computer
+                    didnt restart all of the containers. I installed Proxmox
+                    Virtual Environment.
+                  </p>
+                  <p>
+                    Prior to this, like I mentioned before, the laptop was
+                    running inside my desk cabinet in my room. It had terrible
+                    ventilation and made a lot of noise while I was trying to
+                    sleep. So, with me installing proxmox, I had to move it to
+                    the basement because it required ethernet and I dont have it
+                    in my room. Now it found a better place to stay and I found
+                    some peace in my sleep.
+                  </p>
+
+                  <p>
+                    When I installed proxmox I created 3 LXC containers, all of
+                    which are still the ones I use. One for the NGINX proxy
+                    manager, one for my media related stuff, and one for
+                    portainer. My media-server container became my main one,
+                    since it was the main focus of the server.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                  <a href="/assets/projects/homelab/pve.png"
+                    ><img
+                      class="project-display"
+                      src="/assets/projects/homelab/pve.png"
+                      style="max-width: 49.5%;"
+                    /></a
+                  >
+                  <a href="/assets/projects/homelab/vault.png"
+                    ><img
+                      class="project-display"
+                      src="/assets/projects/homelab/vault.png"
+                      style="max-width: 49.5%;"
+                    /></a
+                  >
+                </div>
+
+                <div class="single-item">
+                  <h3>Media Server</h3>
+                  <p>
+                    It started with Jellyfin. I installed it but the one problem
+                    was that I had to manually obtain media. But a few months
+                    later, I ended up automating it. I installed the -arr suite;
+                    radarr, sonarr, prowlarr. This helped me automate everything
+                    and save me so much time. With this I also got Jellyseer so
+                    the users of the server (my family) could request media.
+                  </p>
+                  <p>
+                    I also experimented with other services like Plex and Emby,
+                    but #1, they werent free, and #2, Jellyfin was just easier.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                  <a href="/assets/projects/homelab/jellyfin.png"
+                    ><img
+                      class="project-display"
+                      src="/assets/projects/homelab/jellyfin.png"
+                      style="max-width: 49.5%;"
+                    /></a
+                  >
+                  <a href="/assets/projects/homelab/jellyseer.png"
+                    ><img
+                      class="project-display"
+                      src="/assets/projects/homelab/jellyseer.png"
+                      style="max-width: 49.5%;"
+                    /></a
+                  >
+                </div>
+
+                <div class="single-item">
+                  <h3>Home Automation</h3>
+                  <p>
+                    Over the years my homelab has been up I have had an Asus
+                    Chromebox, but never had any luck removing ChromeOS from it.
+                    In mid 2025 I was been able to remove ChromeOS and install
+                    Home Assistant OS.
+                  </p>
+                  <p>
+                    After I installed it, it just sat there, doing nothing,
+                    until late 2025, where I finally found a use for it. I
+                    grabbed an old tablet and installed the Kiosk Browser App
+                    and turned it into a desktop dashboard. It displays the
+                    weather, time, qBittorent status, light controls, and even
+                    my latest media on Jellyfin.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                  <h3>The Internet</h3>
+                  <p>
+                    After running my server for a bit, I wanted to access it
+                    from outside my network, but i didnt want to expose any
+                    ports because of security risks. I found Twingate while
+                    looking through Youtube and found it perfect for my need. I
+                    set it up and it ran great. But it wasnt my first choice.
+                  </p>
+                  <p>
+                    My first choice was Cloudflare Tunnels, but it required a
+                    domain name, which I did not have. November 2025, I needed
+                    to access something on my server for a school project, but I
+                    couldnt install the Twingate VPN on my school's computer, so
+                    I finally decided to buy a domain, matheusbosc.com. I then
+                    set up cloudflare tunnels on my server and it worked great.
+                    With that set up, I also began using many other cloudflare
+                    services.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                  <a href="/assets/projects/homelab/ha.png"
+                    ><img
+                      class="project-display"
+                      src="/assets/projects/homelab/ha.png"
+                      style="max-width: 49.5%;"
+                    /></a
+                  >
+                  <a href="/assets/projects/homelab/vault.png"
+                    ><img
+                      class="project-display"
+                      src="/assets/projects/homelab/vault.png"
+                      style="max-width: 49.5%;"
+                    /></a
+                  >
+                </div>
+
+                <div class="single-item">
+                  <h3>What's Next</h3>
+                  <p>
+                    I want to expand my homelab to more devices soon. Move my
+                    media server to its own server so it has its own storage. I
+                    also want to create a NAS and setup NextCloud which I used
+                    to host. Another thing that I want to do is expand Home
+                    Assistant because at the moment it only has a few devices
+                    set up.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                  <p>
+                    My homelab is great, but i hope it becomes bigger and
+                    better.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
