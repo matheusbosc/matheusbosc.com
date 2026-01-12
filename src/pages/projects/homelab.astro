@@ -12,7 +12,9 @@ import Sidebar from "../../components/Sidebar.astro";
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">
-            <a href="/devops" class="back-nav-button w-inline-block"
+            <a
+              href="javascript:history.back()"
+              class="back-nav-button w-inline-block"
               ><img
                 src="/assets/back.svg"
                 loading="lazy"
@@ -28,55 +30,57 @@ import Sidebar from "../../components/Sidebar.astro";
               <div class="resouce-items">
                 <div class="single-item">
                   <p>
-                    December 2nd, 2023, I grabbed a thumb drive and an old
-                    laptop, downloaded and installed ubuntu server, and booted
-                    it up. This was the beginning of a neverending passion of
-                    homelabbing.
+                    <strong>Personal Cloud & Infrastructure Playground</strong>
                   </p>
+                  <br />
+                  <p>
+                    <strong>Stack:</strong> Linux, Docker, Cloudflare, Reverse Proxies
+                  </p>
+                  <p>
+                    <strong>Status:</strong> Active & Evolving
+                  </p>
+
+                  <blockquote>
+                    A personal lab environment to experiment with networking,
+                    cloud deployment, container orchestration, and
+                    infrastructure automation.
+                  </blockquote>
                 </div>
 
                 <div class="single-item">
-                  <h3>The Beginning.</h3>
-                  <p>
-                    It all started on an old laptop with ubuntu server installed
-                    running in a cabinet in my room. I installed docker and a
-                    few containers. I started the server because I wanted to
-                    install Home Assistant and pi-hole to get rid of ads on
-                    Youtube, but now its much more than that.
-                  </p>
-                  <p>
-                    While messing around with it I also discovered Jellyfin. I
-                    installed it, but it wasnt really the best because it was so
-                    manual. But in a few months that would change.
-                  </p>
+                  <h3>Key Highlights</h3>
+                  <ul role="list">
+                    <li>
+                      Hosts multiple web services, game servers, and automation
+                      tools.
+                    </li>
+                    <li>
+                      Fully automated with CI/CD pipelines for deployment and
+                      updates.
+                    </li>
+                    <li>
+                      Includes monitoring, logging, and secure external access
+                      via Cloudflare.
+                    </li>
+                    <li>
+                      Designed for learning, testing, and scaling infrastructure
+                      safely.
+                    </li>
+                  </ul>
                 </div>
 
-                <div class="single-item">
-                  <h3>Proxmox</h3>
-                  <p>
-                    March 6th, 2024, I finally decided to uninstall ubuntu and
-                    install something that made it so restarting the computer
-                    didnt restart all of the containers. I installed Proxmox
-                    Virtual Environment.
-                  </p>
-                  <p>
-                    Prior to this, like I mentioned before, the laptop was
-                    running inside my desk cabinet in my room. It had terrible
-                    ventilation and made a lot of noise while I was trying to
-                    sleep. So, with me installing proxmox, I had to move it to
-                    the basement because it required ethernet and I dont have it
-                    in my room. Now it found a better place to stay and I found
-                    some peace in my sleep.
-                  </p>
+                <!--<div class="single-item">
+                  <h3>Visual / Diagram</h3>
 
-                  <p>
-                    When I installed proxmox I created 3 LXC containers, all of
-                    which are still the ones I use. One for the NGINX proxy
-                    manager, one for my media related stuff, and one for
-                    portainer. My media-server container became my main one,
-                    since it was the main focus of the server.
-                  </p>
-                </div>
+                  Insert a simplified network diagram or architecture GIF here
+                  
+                  Public internet → Cloudflare → Reverse Proxy → Dockerized
+                  services 
+                  
+                  Services include: web apps, game servers, dev tools,
+                  media servers
+                  
+                </div> -->
 
                 <div class="single-item">
                   <a href="/assets/projects/homelab/pve.png"
@@ -86,29 +90,33 @@ import Sidebar from "../../components/Sidebar.astro";
                       style="max-width: 49.5%;"
                     /></a
                   >
-                  <a href="/assets/projects/homelab/vault.png"
+                  <a href="/assets/projects/homelab/portainer.png"
                     ><img
                       class="project-display"
-                      src="/assets/projects/homelab/vault.png"
+                      src="/assets/projects/homelab/portainer.png"
                       style="max-width: 49.5%;"
                     /></a
                   >
                 </div>
 
                 <div class="single-item">
-                  <h3>Media Server</h3>
-                  <p>
-                    It started with Jellyfin. I installed it but the one problem
-                    was that I had to manually obtain media. But a few months
-                    later, I ended up automating it. I installed the -arr suite;
-                    radarr, sonarr, prowlarr. This helped me automate everything
-                    and save me so much time. With this I also got Jellyseer so
-                    the users of the server (my family) could request media.
-                  </p>
-                  <p>
-                    I also experimented with other services like Plex and Emby,
-                    but #1, they werent free, and #2, Jellyfin was just easier.
-                  </p>
+                  <h3>Challenges & Solutions</h3>
+                  <ul role="list">
+                    <li>
+                      <strong>Network Segmentation:</strong> Isolated services using VLANs and Docker networks to prevent interference.
+                    </li>
+                    <li>
+                      <strong>Secure Remote Access:</strong> Implemented zero-trust access and Cloudflare tunnels.
+                    </li>
+                    <!--
+                    <li>
+                      <strong>Automation:</strong> CI/CD pipelines automatically deploy container updates with minimal downtime.
+                    </li>
+                    -->
+                    <li>
+                      <strong>Resource Optimization:</strong> Used virtualization and Docker to maximize hardware efficiency.
+                    </li>
+                  </ul>
                 </div>
 
                 <div class="single-item">
@@ -129,42 +137,18 @@ import Sidebar from "../../components/Sidebar.astro";
                 </div>
 
                 <div class="single-item">
-                  <h3>Home Automation</h3>
-                  <p>
-                    Over the years my homelab has been up I have had an Asus
-                    Chromebox, but never had any luck removing ChromeOS from it.
-                    In mid 2025 I was been able to remove ChromeOS and install
-                    Home Assistant OS.
-                  </p>
-                  <p>
-                    After I installed it, it just sat there, doing nothing,
-                    until late 2025, where I finally found a use for it. I
-                    grabbed an old tablet and installed the Kiosk Browser App
-                    and turned it into a desktop dashboard. It displays the
-                    weather, time, qBittorent status, light controls, and even
-                    my latest media on Jellyfin.
-                  </p>
-                </div>
-
-                <div class="single-item">
-                  <h3>The Internet</h3>
-                  <p>
-                    After running my server for a bit, I wanted to access it
-                    from outside my network, but i didnt want to expose any
-                    ports because of security risks. I found Twingate while
-                    looking through Youtube and found it perfect for my need. I
-                    set it up and it ran great. But it wasnt my first choice.
-                  </p>
-                  <p>
-                    My first choice was Cloudflare Tunnels, but it required a
-                    domain name, which I did not have. November 2025, I needed
-                    to access something on my server for a school project, but I
-                    couldnt install the Twingate VPN on my school's computer, so
-                    I finally decided to buy a domain, matheusbosc.com. I then
-                    set up cloudflare tunnels on my server and it worked great.
-                    With that set up, I also began using many other cloudflare
-                    services.
-                  </p>
+                  <h3>Lessons Learned</h3>
+                  <ul role="list">
+                    <li>
+                      Gained practical experience in <strong>network security</strong> and <strong>service orchestration</strong>.
+                    </li>
+                    <li>
+                      Learned the trade-offs between <strong>simplicity vs. flexibility</strong> in homelab setups.
+                    </li>
+                    <li>
+                      Practiced <strong>monitoring, logging, and troubleshooting</strong> in a controlled environment.
+                    </li>
+                  </ul>
                 </div>
 
                 <div class="single-item">
@@ -184,24 +168,7 @@ import Sidebar from "../../components/Sidebar.astro";
                   >
                 </div>
 
-                <div class="single-item">
-                  <h3>What's Next</h3>
-                  <p>
-                    I want to expand my homelab to more devices soon. Move my
-                    media server to its own server so it has its own storage. I
-                    also want to create a NAS and setup NextCloud which I used
-                    to host. Another thing that I want to do is expand Home
-                    Assistant because at the moment it only has a few devices
-                    set up.
-                  </p>
-                </div>
-
-                <div class="single-item">
-                  <p>
-                    My homelab is great, but i hope it becomes bigger and
-                    better.
-                  </p>
-                </div>
+              
               </div>
             </section>
           </div>

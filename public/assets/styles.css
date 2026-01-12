@@ -280,6 +280,13 @@ p {
   line-height: 26px;
 }
 
+blockquote {
+  color: #a8a8a8;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
 .content {
   width: 100vw;
   height: 100vh;
@@ -426,6 +433,13 @@ p {
   font-size: 16px;
 }
 
+.single-item li{
+  color: #a8a8a8;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
 .resouce-items {
   grid-column-gap: 64px;
   grid-row-gap: 64px;
@@ -562,6 +576,11 @@ p {
 .projects-category-image {
   width: 82px;
   height: 82px;
+}
+
+.featured-category-image {
+  width: 90px;
+  height: 90px;
 }
 
 @media screen and (max-width: 991px) {

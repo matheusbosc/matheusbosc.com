@@ -3,10 +3,8 @@ import Header from "../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
 ---
 
-
-<!DOCTYPE html>
-<html
->
+<!doctype html>
+<html>
   <Header title="Matheus Boscariol" />
   <body>
     <div class="content">
@@ -17,23 +15,38 @@ import Sidebar from "../components/Sidebar.astro";
             <div class="fold-content">
               <h1>Hi, I'm Matheus.<br />I make games, apps, and more!</h1>
               <p class="lead">
-                Backend and Game Developer. A dedicated learner, problem solver, and team member, working to achieve good results, fast.
+                Focusing on Game and Backend developer, i'm an independent
+                developer and student. I like making fun games that people will
+                enjoy and software that solves real problems.
               </p>
             </div>
-            <a href="mailto:matheus@matheusbosc.com	" class="button w-button">Contact</a>
+            <a href="/about" class="button w-button"
+              >More about me</a
+            >
+            <a href="mailto:matheus@matheusbosc.com	" class="button w-button"
+              >Contact</a
+            >
           </main>
           <div class="projects-section">
+            <h3>Categories</h3>
             <!-- Software Development -->
             <a href="/software-development" class="projects-container">
               <div class="single-projects-category">
                 <div class="projects-category-image-container">
-                  <img src="./assets/browser.svg" loading="lazy" alt="" class="projects-category-image" />
+                  <img
+                    src="./assets/browser.svg"
+                    loading="lazy"
+                    alt=""
+                    class="projects-category-image"
+                  />
                 </div>
               </div>
               <div class="single-projects-content">
                 <h4>Software Development</h4>
                 <div class="tech-tools-container">
-                  <div class="mini-label-white gray-color">Technologies &amp; tools</div>
+                  <div class="mini-label-white gray-color">
+                    Technologies &amp; tools
+                  </div>
                   <div class="chips-container chips-container-small-width">
                     <div class="single-chip small-chip">Unity</div>
                     <div class="single-chip small-chip">C#</div>
@@ -53,23 +66,80 @@ import Sidebar from "../components/Sidebar.astro";
             <a href="/devops" class="projects-container">
               <div class="single-projects-category">
                 <div class="projects-category-image-container devops-img">
-                  <img src="./assets/database.svg" loading="lazy" alt="" class="projects-category-image" />
+                  <img
+                    src="./assets/database.svg"
+                    loading="lazy"
+                    alt=""
+                    class="projects-category-image"
+                  />
                 </div>
               </div>
               <div class="single-projects-content">
                 <h4>DevOps &amp;&nbsp;Cloud</h4>
                 <div class="tech-tools-container">
-                  <div class="mini-label-white gray-color">Technologies &amp; tools</div>
+                  <div class="mini-label-white gray-color">
+                    Technologies &amp; tools
+                  </div>
                   <div class="chips-container chips-container-small-width">
                     <div class="single-chip small-chip">Github Actions</div>
                     <div class="single-chip small-chip">Google Cloud</div>
                     <div class="single-chip small-chip">Proxmox VE</div>
                     <div class="single-chip small-chip">Docker</div>
-                    <div class="single-chip small-chip">Cloudflare Zero Trust</div>
+                    <div class="single-chip small-chip">
+                      Cloudflare Zero Trust
+                    </div>
                     <div class="single-chip small-chip">Github Sites</div>
                     <div class="single-chip small-chip">Linux</div>
                     <div class="single-chip small-chip">Bash</div>
                   </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="projects-section">
+            <h3>Featured Projects</h3>
+
+            <a href="/projects/homelab" class="projects-container">
+              <div class="single-projects-category">
+                <div class="projects-category-image-container">
+                  <img
+                    src="./assets/server-solid-full.svg"
+                    loading="lazy"
+                    alt=""
+                    class="featured-category-image"
+                  />
+                </div>
+              </div>
+              <div class="single-projects-content">
+                <h4>Homelab</h4>
+                <div class="tech-tools-container">
+                  <p>
+                    A linux server I have been running since December 2023. My homelab has multiple containers running across various devices.
+                    Many categories of services are available on my homelab, from media to development.
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <a href="/projects/todo-app" class="projects-container">
+              <div class="single-projects-category">
+                <div class="projects-category-image-container devops-img">
+                  <img
+                    src="./assets/projects/todo-app/icon.png"
+                    loading="lazy"
+                    alt=""
+                    class="featured-category-image"
+                  />
+                </div>
+              </div>
+              <div class="single-projects-content">
+                <h4>To-Do App</h4>
+                <div class="tech-tools-container">
+                  <p>
+                    A simple to-do web application built with python and flask. Includes many features like user management,
+                    list sharing, and more.
+                  </p>
                 </div>
               </div>
             </a>
