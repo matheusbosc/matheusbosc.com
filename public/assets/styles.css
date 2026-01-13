@@ -318,6 +318,14 @@ blockquote {
   line-height: 24px;
 }
 
+.about-title-white {
+  color: #fff;
+  margin-bottom: 2px;
+  font-size: 58px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
 .label-gray {
   color: #a8a8a8;
   font-size: 14px;
@@ -335,6 +343,13 @@ blockquote {
   border: 1px solid #353535;
   border-radius: 100px;
   margin-right: 12px;
+}
+.about-image {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #353535;
+  border-radius: 100px;
+  margin-right: 20px;
 }
 
 .main {

@@ -1,0 +1,235 @@
+---
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+---
+
+<!doctype html>
+<html>
+  <Header title="About Me | Matheus Boscarop;" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="about" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a
+              href="javascript:history.back()"
+              class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            
+            <div class="niv-data">
+              <img
+                src="/assets/sam.jpg"
+                loading="eager"
+                alt="Profile picture"
+                class="about-image"
+              />
+              <div>
+                <div class="about-title-white">About Me</div>
+              </div>
+            </div>
+            <section class="items-container">
+              <div class="resouce-items">
+                <div class="single-item">
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://www.linkedin.com/in/matheus-boscariol/"
+                        ><img
+                          src="/assets/linkedin.svg"
+                          loading="eager"
+                          alt="linkedin logo"
+                          class="nav-link-image"
+                        /></a
+                      >
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/"
+                        ><img
+                          src="/assets/github.svg"
+                          loading="eager"
+                          alt="github logo"
+                          class="nav-link-image"
+                        /></a
+                      >
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://matheusboscariol.itch.io/"
+                        ><img
+                          src="/assets/itchio.svg"
+                          loading="eager"
+                          alt="Itch.io logo"
+                          class="nav-link-image"
+                        /></a
+                      >
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://youtube.com/@matheusbosc"
+                        ><img
+                          src="/assets/youtube.svg"
+                          loading="eager"
+                          alt="youtube logo"
+                          class="nav-link-image"
+                        /></a
+                      >
+                    </div>
+                  </div>
+                  <br />
+                  <h2 style="color: white;">
+                    Matheus De Oliveira Boscariol - Game & Full Stack Developer
+                  </h2>
+                  <blockquote>
+                    “I build games and tools that merge creativity with
+                    technology. I also experiment with cloud systems and
+                    personal projects to sharpen my skills.”
+                  </blockquote>
+                </div>
+
+                <div class="single-item">
+                  <h3>Who Am I</h3>
+                  <p>
+                    I am Matheus, a hard working high school student. I also
+                    make games and other software in my free time for fun and to
+                    build up my portfolio. I usually focus on game development
+                    but every once in a while I make other kinds of software. I
+                    also love messing with cloud and servers. I also host a <a
+                      href="/projects/homelab">homelab</a
+                    > in my free time that is not only for fun but also serves as
+                    a testing sandbox for my own creations.
+                  </p>
+                  <p>
+                    I also have my own <a
+                      href="https://youtube.com/@matheusbosc">youtube channel</a
+                    > where I post video devlogs, and complete programming challenges.
+                  </p>
+                  <p>
+                    Some of my other hobbies include volleyball and rowing (I am
+                    on my schools volleyball & rowing teams), I play the tenor
+                    saxophone and a bit of piano, and I also like 3d printing.
+                  </p>
+                </div>
+
+                <div class="single-item">
+                  <h3>What I Do / Skills</h3>
+                  <ul role="list">
+                    <li>Game Development with Unity & C#.</li>
+                    <li>Software development with python.</li>
+                    <li>
+                      Cloud & DevOps with Docker, Cloudflare, Github Actions,
+                      Jenkins.
+                    </li>
+                    <li>Video Making & Editing.</li>
+                  </ul>
+                </div>
+
+                <div class="single-item">
+                  <h3>Why I Do It</h3>
+                  <!-- TODO: Finish This -->
+                  <ul role="list">
+                    <li>
+                      <strong>Why I make games & software:</strong> I love creating,
+                      and why not combine that creating with another passion of mine,
+                      computers! I also love the challenge and problem solving involved
+                      in software development.
+                    </li>
+                    <li>
+                      <strong>Why do I explore cloud and DevOps:</strong> I explore
+                      these 2 because it allows me to, when not already available
+                      to me, host and use my services where privacy, price, and availability
+                      isnt an issue.
+                    </li>
+                    <li>
+                      <strong
+                        >How do I approach learning & problem solving:</strong
+                      > When approaching a problem to solve or something to learn,
+                      I tend to look at the finished result, or imagine what it would
+                      be like, and work backwards from there, reconstructing every
+                      little part of my expected end goal.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="single-item">
+                  <h3>Do I sound interesting?</h3>
+                  <p>
+                    If yes, make sure to check out my other software development
+                    and devops/cloud projects! Also check out my github for even
+                    more projects.
+                  </p>
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="/software-development"
+                        >Software Development Projects</a
+                      >
+                    </div>
+                    <div class="single-chip">
+                      <a href="/devops">Devops & Cloud Projects</a>
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/">Github</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="single-item">
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://www.linkedin.com/in/matheus-boscariol/"
+                        ><img
+                          src="/assets/linkedin.svg"
+                          loading="eager"
+                          alt="linkedin logo"
+                          class="nav-link-image"
+                        /></a
+                      >
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/"
+                        ><img
+                          src="/assets/github.svg"
+                          loading="eager"
+                          alt="github logo"
+                          class="nav-link-image"
+                        /></a
+                      >
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://matheusboscariol.itch.io/"
+                        ><img
+                          src="/assets/itchio.svg"
+                          loading="eager"
+                          alt="Itch.io logo"
+                          class="nav-link-image"
+                        /></a
+                      >
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://youtube.com/@matheusbosc"
+                        ><img
+                          src="/assets/youtube.svg"
+                          loading="eager"
+                          alt="youtube logo"
+                          class="nav-link-image"
+                        /></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>

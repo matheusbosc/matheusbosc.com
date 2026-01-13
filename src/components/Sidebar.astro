@@ -43,6 +43,23 @@ const { selectedItem } = Astro.props;
         <div>Home</div>
       </a>
       <a
+        href="/about"
+        class={`nav-link-container w-inline-block ${
+          selectedItem === 'about' ? 'w--current' : ''
+        }`}
+        aria-current={
+          selectedItem === 'about' ? 'page' : undefined
+        }
+      >
+        <img
+          src="/assets/address-card.svg"
+          loading="eager"
+          alt=""
+          class="nav-link-image"
+        />
+        <div>About</div>
+      </a>
+      <a
         href="/software-development"
         class={`nav-link-container w-inline-block ${
           selectedItem === 'software-development' ? 'w--current' : ''
