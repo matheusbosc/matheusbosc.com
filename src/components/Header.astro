@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import { SEO } from "astro-seo";
+import { GoogleAnalytics } from 'astro-google-analytics';
 interface HeaderProps {
   title: string;
   seoTitle: string;
@@ -12,14 +13,8 @@ const { title, seoTitle, description, pageUrl } = Astro.props as HeaderProps;
 
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LRKG4HLBE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<GoogleAnalytics id="G-8LRKG4HLBE" />
 
-  gtag('config', 'G-8LRKG4HLBE');
-</script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>{title}</title>
   <ViewTransitions />

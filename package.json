@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.6.1",
     "astro": "^5.1.5",
+    "astro-google-analytics": "^1.0.3",
     "astro-seo": "^0.8.4"
   }
 }
