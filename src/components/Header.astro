@@ -22,6 +22,7 @@ const { title, seoTitle, description, pageUrl } = Astro.props as HeaderProps;
   <meta content={title} property="twitter:title" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  <link rel="canonical" href={pageUrl} />
   <SEO
     title={seoTitle}
     description={description}
