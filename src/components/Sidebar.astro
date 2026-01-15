@@ -90,6 +90,20 @@ const { selectedItem } = Astro.props;
         />
         <div>DevOps & Cloud</div>
       </a>
+      <a
+        href="/assets/matheusbosc-resume.pdf"
+        class={`nav-link-container w-inline-block ${
+          selectedItem === 'resume' ? 'w--current' : ''
+        }`}
+      >
+        <img
+          src="/assets/file.svg"
+          loading="eager"
+          alt=""
+          class="nav-link-image"
+        />
+        <div>My Resume</div>
+      </a>
       
       <!--
       <a
