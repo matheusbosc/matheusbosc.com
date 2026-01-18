@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Courier+Prime:wght@400;700&display=swap');
 
 html {
   -ms-text-size-adjust: 100%;
@@ -30,6 +30,7 @@ a:hover {
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
+  font-family: Courier Prime, monospace;
 }
 
 img {
@@ -104,16 +105,19 @@ h1 {
   line-height: 44px;
 }
 
+
 h3 {
   margin-top: 20px;
   font-size: 24px;
   line-height: 30px;
+  font-family: Courier Prime, monospace;
 }
 
 h4 {
   margin-top: 10px;
   font-size: 18px;
   line-height: 24px;
+  font-family: Courier Prime, monospace;
 }
 
 p {
@@ -320,10 +324,12 @@ blockquote {
 
 .about-title-white {
   color: #fff;
+  margin-top: 10px;
   margin-bottom: 2px;
   font-size: 58px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 30px;
+  font-family: Courier Prime, monospace;
 }
 
 .label-gray {
@@ -446,6 +452,7 @@ blockquote {
 
 .single-item {
   font-size: 16px;
+  
 }
 
 .single-item li{
