@@ -1,0 +1,147 @@
+---
+import Header from "../../components/Header.astro";
+import Sidebar from "../../components/Sidebar.astro";
+---
+
+<!doctype html>
+<html>
+  <Header title="Chat++ | Matheus Boscariol" seoTitle="Chat++ | Matheus Boscariol" description="A simple, cli, chat application made in C++." pageUrl="https://matheusbosc.com/projects/chat-plus-plus" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="software-development" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a
+              href="javascript:history.back()"
+              class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Chat++</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+
+
+                <div class="single-item">
+                  
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/Chat-plus-plus"
+                        >Github Page</a>
+                    </div>
+                    <!--<div class="single-chip">
+                      <a href="https://github.com/matheusbosc/todo-app/pkgs/container/todo-app"
+                        >GHCR Container</a>
+                    </div> -->
+                  </div>
+                  <br />
+                  <p>
+                    <strong>Platform:</strong> Linux, Windows
+                  </p>
+                  <p>
+                    <strong>Role:</strong> Developer
+                  </p>
+                  <p>
+                    <strong>Stack:</strong> C++, CMake, JSON
+                  </p>
+                  <p>
+                    <strong>Status:</strong> Complete
+                  </p>
+
+                  <blockquote>
+                    A simple terminal based chat application made in C++.
+                  </blockquote>
+                </div>
+
+                <div class="single-item">
+                  <h3>Key Highlights</h3>
+                  <ul role="list">
+                    <li>
+                      Real-time, low-latency chat application built in modern C++ with a custom client-server architecture.
+                    </li>
+                    <li>
+                      Cross-platform (Linux & Windows) with a clean CMake-based build system and modular, extensible codebase.
+                    </li>
+                    <li>
+                      Interactive TUI powered by FTXUI with robust connection handling, clean shutdowns, and crash-safe networking.
+                    </li>
+                  </ul>
+                </div>
+                
+
+                <div class="single-item">
+                  <h3>Challenges & Solutions</h3>
+                  <ul role="list">
+                    <li>
+                      <strong>Managing Dynamic UI in a terminal interface:</strong> Designed a state-driven UI flow with FTXUI and event-triggered loop restarts to transition between screens.
+                    </li>
+                    <li>
+                      <strong>Handling clean shutdowns with blocking sockets and background threads:</strong> Implemented <code>shutdown()</code> and <code>close()</code> to stop socket, atomic run flags, and controlled thread joins to guarantee safe termination.
+                    </li>
+                    <li>
+                      <strong>Maintaining cross-platform builds:</strong> Implemented a CI/CD workflow to build and deploy/distribute the server and client apps using Jenkins. 
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="single-item">
+                      <a href="/assets/projects/chatpp/connect.png"><img class="project-display" src="/assets/projects/chatpp/connect.png" style="max-width: 49.5%;"></a>
+                      <a href="/assets/projects/chatpp/chat-joined.png"><img class="project-display" src="/assets/projects/chatpp/chat-joined.png" style="max-width: 49.5%;"></a>
+                </div>
+
+                <div class="single-item">
+                  <h3>Lessons Learned</h3>
+                  <ul role="list">
+                    <li>
+                      Learned <strong>C++ syntax</strong> and <strong>building with CMake</strong>.
+                    </li>
+                    <li>
+                      Learned how to <strong>build networked apps</strong> and how to <strong>safely and correctly multi-thread</strong>.
+                    </li>
+                    <li>
+                      Deepened my knowledge of <strong>CI/CD workflows</strong>.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="single-item">
+                      <a href="/assets/projects/chatpp/chat-messages.png"><img class="project-display" src="/assets/projects/chatpp/chat-messages.png" style="max-width: 49.5%;"></a>
+                      <a href="/assets/projects/chatpp/server.png"><img class="project-display" src="/assets/projects/chatpp/server.png" style="max-width: 49.5%;"></a>
+                </div>
+
+                
+
+                <div class="single-item">
+                  
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/todo-app"
+                        >Github Page</a>
+                    </div>
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/todo-app/pkgs/container/todo-app"
+                        >GHCR Container</a>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
