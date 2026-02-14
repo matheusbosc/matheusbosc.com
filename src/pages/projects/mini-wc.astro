@@ -1,0 +1,127 @@
+---
+import Header from "../../components/Header.astro";
+import Sidebar from "../../components/Sidebar.astro";
+---
+
+<!doctype html>
+<html>
+  <Header title="Mini-WC | Matheus Boscariol" seoTitle="Mini-WC | Matheus Boscariol" description="A basic version of the unix utility, wc." pageUrl="https://matheusbosc.com/projects/mini-wc" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="software-development" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a
+              href="javascript:history.back()"
+              class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Mini-WC</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+
+
+                <div class="single-item">
+                  
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/mini-wc"
+                        >Github Page</a>
+                    </div>
+                    <!--<div class="single-chip">
+                      <a href="https://github.com/matheusbosc/todo-app/pkgs/container/todo-app"
+                        >GHCR Container</a>
+                    </div> -->
+                  </div>
+                  <br />
+                  <p>
+                    <strong>Platform:</strong> x86-64 (64 bit) Linux
+                  </p>
+                  <p>
+                    <strong>Role:</strong> Developer
+                  </p>
+                  <p>
+                    <strong>Stack:</strong> x86-64 Assembly
+                  </p>
+                  <p>
+                    <strong>Status:</strong> Complete
+                  </p>
+
+                  <blockquote>
+                    A basic version of the unix utility, wc, that prints the amount of bytes in a file.
+                  </blockquote>
+                </div>
+
+                <div class="single-item">
+                  <h3>Key Highlights</h3>
+                  <ul role="list">
+                    <li>
+                      Made completely in assembly without any higher level language like C or C++.
+                    </li>
+                    <li>
+                      A basic recreation of the <code>wc</code> unix utility, displaying the amount of bytes in a file.
+                    </li>
+                  </ul>
+                </div>
+                
+
+                <div class="single-item">
+                  <h3>Challenges & Solutions</h3>
+                  <ul role="list">
+                    <li>
+                      <strong>Converting integers to ASCII:</strong> Wrote a function that does some basic arithmetic to convert each digit to ASCII.
+                    </li>
+                    <li>
+                      <strong>Ensuring the code received the correct data:</strong> Checked the data in various places throughout the code and ensured the return values from syscalls were all correct.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="single-item">
+                  <h3>Lessons Learned</h3>
+                  <ul role="list">
+                    <li>
+                      Learned <strong>correct practices</strong> for creating programs with assembly.
+                    </li>
+                    <li>
+                      Learned how and where to properly use <strong>pointers</strong> and <strong>values</strong>
+                    </li>
+                    <li>
+                      Help me understand better how some programs work <strong>behind the scenes</strong>, and how simple looking programs can be <strong>extremely complex</strong>.
+                    </li>
+                  </ul>
+                </div>
+
+                
+
+                <div class="single-item">
+                  
+                  <div class="chips-container">
+                    <div class="single-chip">
+                      <a href="https://github.com/matheusbosc/mini-wc"
+                        >Github Page</a>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
