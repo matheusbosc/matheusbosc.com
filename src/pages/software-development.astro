@@ -4,17 +4,6 @@ import Project from "../components/Project.astro";
 import Sidebar from "../components/Sidebar.astro";
 const projects = [
   {
-    title: "To-Do App",
-    desc: [
-      "Developed a todo app for the CS50x online course final project",
-      "Designed and implemented a backend and database using python with flask and sql",
-      "Implemented the Web Page UI using Bootstrap CSS",
-      "Created Dockerfile and distributed the docker image on the Github Container Repo"
-    ],
-    tech: ["HTML", "Bootstrap CSS", "Python", "Flask", "Docker"],
-    link: "/projects/todo-app"
-  },
-  {
     title: "Chat++",
     desc: [
       "Developed a server and client for a chat application.",
@@ -22,17 +11,27 @@ const projects = [
       "Created a CI/CD workflow in jenkins for building, deploying, and distributing",
     ],
     tech: ["C++", "CMake", "JSON", "Jenkins"],
-    link: "/projects/chat-plus-plus"
+    link: "/projects/chat-plus-plus",
+  },
+  {
+    title: "System Breach",
+    desc: [
+      "Created a fun game for the GameName $5k Game Jam",
+      "Marked the beginning of my game studio, Trust The Process",
+      "Designed and implemented well made features.",
+    ],
+    tech: ["Unity", "C#"],
+    link: "/projects/system-breach",
   },
   {
     title: "Last Ember",
     desc: [
       "Participated in the Brainless Mini Game Jam 2026",
       "Created a completed and optimized game featuring many feature",
-      "Received #9 place in the presentation category"
+      "Received #9 place in the presentation category",
     ],
     tech: ["Unity", "C#", "JSON"],
-    link: "/projects/last-ember"
+    link: "/projects/last-ember",
   },
   {
     title: "Mini-WC",
@@ -41,49 +40,73 @@ const projects = [
       "Used only Assembly for the entire program, without any higher level language.",
     ],
     tech: ["Assembly"],
-    link: "/projects/mini-wc"
+    link: "/projects/mini-wc",
   },
   {
     title: "Space Game",
     desc: [
       "Created a 3 dimentional version of the Atari Game, Space Invaders with extra features",
       "Made for my final project in my computer technology class",
-      "Includes a shop and upgrade system, wave system, leaderboard"
+      "Includes a shop and upgrade system, wave system, leaderboard",
     ],
     tech: ["Unity", "C#", "HLSL Shaders"],
-    link: "/projects/space-game"
-  }
+    link: "/projects/space-game",
+  },
+  {
+    title: "To-Do App",
+    desc: [
+      "Developed a todo app for the CS50x online course final project",
+      "Designed and implemented a backend and database using python with flask and sql",
+      "Implemented the Web Page UI using Bootstrap CSS",
+      "Created Dockerfile and distributed the docker image on the Github Container Repo",
+    ],
+    tech: ["HTML", "Bootstrap CSS", "Python", "Flask", "Docker"],
+    link: "/projects/todo-app",
+  },
 ];
 ---
 
-<!DOCTYPE html>
-<html
->
-  <Header title="Software Development | Matheus Boscariol" seoTitle="Software Development | Matheus Boscariol" description="Checkout my software development projects, including games, apps, and more." pageUrl="https://matheusbosc.com/software-development/"/>
+<!doctype html>
+<html>
+  <Header
+    title="Software Development | Matheus Boscariol"
+    seoTitle="Software Development | Matheus Boscariol"
+    description="Checkout my software development projects, including games, apps, and more."
+    pageUrl="https://matheusbosc.com/software-development/"
+  />
   <body>
     <div class="content">
-        <Sidebar selectedItem="software-development" />
+      <Sidebar selectedItem="software-development" />
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">
-            <a href="javascript:history.back()" class="back-nav-button w-inline-block"
-              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+            <a
+              href="javascript:history.back()"
+              class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
               <div>Back</div></a
             >
           </div>
           <div class="content-container">
             <h1>Software Development</h1>
             <section class="items-container">
-                <div class="resouce-items">
-                    {projects.map(project => (
-                      <Project 
-                        link={project.link}
-                        title={project.title} 
-                        desc={project.desc}
-                        tech={project.tech}
-                      />
-                    ))}
-                  </div>
+              <div class="resouce-items">
+                {
+                  projects.map((project) => (
+                    <Project
+                      link={project.link}
+                      title={project.title}
+                      desc={project.desc}
+                      tech={project.tech}
+                    />
+                  ))
+                }
+              </div>
             </section>
           </div>
         </div>
