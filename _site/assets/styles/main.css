@@ -1,0 +1,33 @@
+:root {
+    --bs-dark-1: #0f141d;
+    --bs-dark-2: #111620;
+    --header-bg: #1b222e;
+    --light-text: #eeefe6;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(125deg, var(--bs-dark-1) 0%, var(--bs-dark-2) 50%, var(--bs-dark-1) 100%) !important;
+    color: var(--light-text);
+}
+
+.header-bg {
+    background-color: var(--header-bg) !important;
+}
+
+.full-width {
+    max-width: 100%;
+}
+
+.border-bottom {
+    border-bottom: 4px solid #0f141d !important;
+}
