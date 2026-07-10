@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
 :root {
     --bs-dark-1: #0f141d;
     --bs-dark-2: #111620;
+    --accent-blue: #2c4fdd;
+    --accent-blue-darker: #2546c7;
     --header-bg: #1b222e;
+    --card-bg: #212e42;
     --light-text: #eeefe6;
 }
 
@@ -18,6 +23,45 @@ body {
     background-attachment: fixed;
     background: linear-gradient(125deg, var(--bs-dark-1) 0%, var(--bs-dark-2) 50%, var(--bs-dark-1) 100%) !important;
     color: var(--light-text);
+
+    font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.btn-outline-primary {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.btn-outline-primary:hover {
+  color: var(--light-text);
+  background-color: var(--accent-blue-darker);
+  border-color: var(--accent-blue-darker);
+}
+
+.btn-outline-tertiary {
+  color: #d6d6d0;
+  border-color: #d6d6d0;
+}
+
+.btn-outline-tertiary:hover {
+  color: var(--card-bg);
+  background-color: #f0f0ea;
+  border-color: #f0f0ea;
+}
+
+.btn-primary {
+  color: var(--light-text);
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.btn-primary:hover {
+  color: var(--light-text);
+  background-color: var(--accent-blue-darker);
+  border-color: var(--accent-blue-darker);
 }
 
 .header-bg {
@@ -30,4 +74,17 @@ body {
 
 .border-bottom {
     border-bottom: 4px solid #0f141d !important;
+}
+
+.card-bg {
+    background-color: var(--card-bg) !important;
+    color: var(--light-text);
+}
+
+.overlay-text {
+    color: var(--light-text) !important;
+}
+
+.overlay-text:hover {
+    color: var(--light-text) !important;
 }

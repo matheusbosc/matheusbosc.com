@@ -19,48 +19,199 @@
 </head>
 
 <body>
-    <div class="full-width container header-bg border-bottom mb-4">
+    <div class="full-width container header-bg">
         <header
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 full-width">
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 px-3 full-width">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none">
-                <img src="/assets/images/icon.jpg" style="max-width: 25%; height: auto;">
+                <img src="/assets/images/icon.png" style="max-width: 20%; padding-bottom: 5%; height: auto;">
             </a>
 
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="font-size: 1.25rem;">
 
 
                 
                 <li><a href="/"
-                        class="nav-link px-2 link-secondary">Home</a></li>
+                        class="nav-link px-4 link-secondary">Home</a></li>
                 
                 <li><a href="/about/"
-                        class="nav-link px-2 link-light">About</a></li>
+                        class="nav-link px-4 link-light">About</a></li>
                 
                 <li><a href="/projects/"
-                        class="nav-link px-2 link-light">Projects</a></li>
+                        class="nav-link px-4 link-light">Projects</a></li>
                 
             </ul>
 
             <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sign-up</button>
+                <button type="button" class="btn btn-outline-primary me-3">Resume</button>
+                <button type="button" class="btn btn-primary">Contact Me</button>
             </div>
         </header>
 </div>
 
     <!-- HERO -->
 
+<div class="header-bg full-width">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/assets/images/icon.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="450"
+          height="400" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Matheus Boscariol</h1>
+        <p class="lead">Matheus is a high school student who splits his time between competitive rowing, volleyball,
+          saxophone, and building things — games, software, and a homelab that doubles as his personal testing ground.
+          After a $5k game jam, he co-founded his own studio to bring their game to life, on track for a 2027
+          release. But what really drives how he creates, learns, and solves problems? That's the part you'll want to
+          read for yourself.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="#projects" class="btn btn-primary btn-lg px-4 me-md-2">View Projects</a>
+          <a href="/about" class="btn btn-outline-secondary btn-lg px-4">About Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- FEATURED PROJECTS -->
+<div class="full-width">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-4 col-sm-8 col-lg-4">
+        <img src="/assets/images/projects/chat-pp/cover.png" class="d-block mx-lg-auto img-fluid"
+          alt="Chat++ Cove Image (Client UI)" width="450" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Chat++</h1>
+        <p class="lead">Chat++ is a terminal-based chat app in modern C++ with a custom client-server architecture, a
+          modular plugin system, and a crash-safe FTXUI interface — built with a Jenkins CI/CD pipeline for
+          cross-platform delivery.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/projects/chat-plus-plus" class="btn btn-primary btn-lg px-4 me-md-2">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-4 col-sm-8 col-lg-4">
+        <img src="/assets/images/projects/system-breach/cover.png" class="d-block mx-lg-auto img-fluid"
+          alt="System Breach Gameplay Screenshot" width="450" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold lh-1 mb-3">System Breach</h1>
+        <p class="lead">System Breach is a pixel art stealth-action game built in Unity 6 LTS, following Unit 404, a
+          rogue android escaping the corporate facility of Everwatch. Blending stealth and action gameplay with a
+          branching moral ending, it's being developed by Trust The Process LLC, an indie studio with a globally
+          distributed team.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/projects/system-breach" class="btn btn-primary btn-lg px-4 me-md-2">View More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- SKILLS -->
 
 
 <!-- OTHER PROJECTS -->
+<div id="projects" class="album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      
 
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/system-breach" class="overlay-text"><img src="/assets/images/projects/system-breach/cover.png" alt="System Breach Cover" width="100%"></a>
+              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+                System Breach
+              </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A pixel art stealth-action game built in Unity 6 LTS, following rogue android Unit 404 as he escapes the corporate facility of Everwatch.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/system-breach" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Ongoing</small>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<!-- CONTACT ME -->
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/homelab" class="overlay-text"><img src="/assets/images/projects/homelab/cover.png" alt="Homelab Cover" width="100%"></a>
+              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+                Homelab
+              </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A self-hosted infrastructure playground running containerized services, CI/CD pipelines, and secure Cloudflare-tunneled access, built to experiment with networking, orchestration, and automation.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/homelab" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Ongoing</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/chat-plus-plus" class="overlay-text"><img src="/assets/images/projects/chat-pp/cover.png" alt="Chat Plus Plus Cover" width="100%"></a>
+              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+                Chat Plus Plus
+              </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A terminal-based chat app in modern C++ featuring a custom client-server architecture, a plugin system, and a crash-safe TUI, deployed via a Jenkins CI/CD pipeline.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/chat-plus-plus" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/last-ember" class="overlay-text"><img src="/assets/images/projects/system-breach/cover.png" alt="Last Ember Cover" width="100%"></a>
+              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+                Last Ember
+              </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A fast-paced 2D survival game built in Unity/C#, featuring random events and obstacles designed to test how long you can last, with fully custom, original art.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/last-ember" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- CONTACT ME -->
 
     
 </body>

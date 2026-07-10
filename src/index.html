@@ -6,14 +6,99 @@ permalink: /
 
 <!-- HERO -->
 
+<div class="header-bg full-width">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/assets/images/icon.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="450"
+          height="400" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Matheus Boscariol</h1>
+        <p class="lead">Matheus is a high school student who splits his time between competitive rowing, volleyball,
+          saxophone, and building things — games, software, and a homelab that doubles as his personal testing ground.
+          After a $5k game jam, he co-founded his own studio to bring their game to life, on track for a 2027
+          release. But what really drives how he creates, learns, and solves problems? That's the part you'll want to
+          read for yourself.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="#projects" class="btn btn-primary btn-lg px-4 me-md-2">View Projects</a>
+          <a href="/about" class="btn btn-outline-secondary btn-lg px-4">About Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- FEATURED PROJECTS -->
+<div class="full-width">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-4 col-sm-8 col-lg-4">
+        <img src="/assets/images/projects/chat-pp/cover.png" class="d-block mx-lg-auto img-fluid"
+          alt="Chat++ Cove Image (Client UI)" width="450" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Chat++</h1>
+        <p class="lead">Chat++ is a terminal-based chat app in modern C++ with a custom client-server architecture, a
+          modular plugin system, and a crash-safe FTXUI interface — built with a Jenkins CI/CD pipeline for
+          cross-platform delivery.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/projects/chat-plus-plus" class="btn btn-primary btn-lg px-4 me-md-2">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-4 col-sm-8 col-lg-4">
+        <img src="/assets/images/projects/system-breach/cover.png" class="d-block mx-lg-auto img-fluid"
+          alt="System Breach Gameplay Screenshot" width="450" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold lh-1 mb-3">System Breach</h1>
+        <p class="lead">System Breach is a pixel art stealth-action game built in Unity 6 LTS, following Unit 404, a
+          rogue android escaping the corporate facility of Everwatch. Blending stealth and action gameplay with a
+          branching moral ending, it's being developed by Trust The Process LLC, an indie studio with a globally
+          distributed team.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/projects/system-breach" class="btn btn-primary btn-lg px-4 me-md-2">View More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- SKILLS -->
 
 
 <!-- OTHER PROJECTS -->
+<div id="projects" class="album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for post in site.posts %}
 
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="{{ post.url }}" class="overlay-text"><img src="{{ post.coverpath }}" alt="{{ post.title }} Cover" width="100%"></a>
+              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+                {{ post.title }}
+              </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ post.short-description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="{{ post.url }}" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: {{ post.status }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<!-- CONTACT ME -->
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- CONTACT ME -->
