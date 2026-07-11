@@ -16,6 +16,8 @@
     <!-- OTHER STUFF -->
     <title>Home | Matheus Boscariol</title>
     <link href="/assets/styles/main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd4cf30464.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/images/icon.png">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
         <header
             class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 px-3 full-width">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none">
-                <img src="/assets/images/icon.png" style="max-width: 20%; padding-bottom: 5%; height: auto;">
+                <img class="shift-hover" src="/assets/images/icon.png" style="max-width: 20%; padding-bottom: 5%; height: auto;">
             </a>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="font-size: 1.25rem;">
@@ -42,15 +44,16 @@
             </ul>
 
             <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-3">Resume</button>
-                <button type="button" class="btn btn-primary">Contact Me</button>
+                <a type="button" class="btn btn-outline-primary me-3">Resume</a>
+                <a href="/#contact" class="btn btn-primary">Contact Me</a>
             </div>
         </header>
 </div>
 
-    <!-- HERO -->
+    <main style="flex: 1;">
+        <!-- HERO ------------------------------------------------------------------------------------------------------------------->
 
-<div class="header-bg full-width">
+<div id="hero" class="header-bg full-width">
   <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
@@ -74,12 +77,12 @@
 </div>
 
 
-<!-- FEATURED PROJECTS -->
-<div class="full-width">
+<!-- FEATURED PROJECTS --------------------------------------------------------------------------------------------------------->
+<div id="featured" class="full-width">
   <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row align-items-center g-5 py-5">
       <div class="col-4 col-sm-8 col-lg-4">
-        <img src="/assets/images/projects/chat-pp/cover.png" class="d-block mx-lg-auto img-fluid"
+        <img src="/assets/images/projects/chat-plus-plus/cover.png" class="image-effect d-block mx-lg-auto img-fluid"
           alt="Chat++ Cove Image (Client UI)" width="450" height="400" loading="lazy">
       </div>
       <div class="col-lg-8">
@@ -94,7 +97,7 @@
     </div>
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-4 col-sm-8 col-lg-4">
-        <img src="/assets/images/projects/system-breach/cover.png" class="d-block mx-lg-auto img-fluid"
+        <img src="/assets/images/projects/system-breach/cover.png" class="image-effect d-block mx-lg-auto img-fluid"
           alt="System Breach Gameplay Screenshot" width="450" height="400" loading="lazy">
       </div>
       <div class="col-lg-8">
@@ -112,10 +115,62 @@
 </div>
 
 
-<!-- SKILLS -->
+<!-- SKILLS ---------------------------------------------------------------------------------------------------------------->
+
+<div id="skills" class="py-5 accent-bg">
+  <div class="container">
+    <h1 class="text-center display-3 fw-bold py-3">Skills</h1>
+
+    <!-- CARDS -->
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Game Development</h3>
+          <p>
+            Unity · C# · Blender · FMOD · Shader Graph · Photon
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Software Development</h3>
+          <p>
+            C++ · Python · x86-64 Assembly · Java · SQL · REST APIs
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Web Development</h3>
+          <p>
+            Flask · HTML · CSS · JavaScript · Bootstrap
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Systems & Infrastructure</h3>
+          <p>
+            Linux · Docker · Git/Github · Jenkins · Cloudflare
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
 
 
-<!-- OTHER PROJECTS -->
+
+<!-- OTHER PROJECTS ----------------------------------------------------------------------------------------------------->
 <div id="projects" class="album py-5">
   <div class="container">
     <h1 class="text-center display-3 fw-bold py-5">Projects</h1>
@@ -125,10 +180,12 @@
       <div class="col">
         <div class="card shadow-sm card-bg">
           <div class="image-wrapper" style="position: relative;">
-            <a href="/projects/system-breach" class="overlay-text"><img src="/assets/images/projects/system-breach/cover.png" alt="System Breach Cover" width="100%"></a>
-              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
-                System Breach
-              </div>
+            <a href="/projects/system-breach" class="overlay-text"><img src="/assets/images/projects/system-breach/cover.png"
+                alt="System Breach Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">System Breach</h6>
+            </div>
           </div>
           <div class="card-body">
             <p class="card-text">A pixel art stealth-action game built in Unity 6 LTS, following rogue android Unit 404 as he escapes the corporate facility of Everwatch.</p>
@@ -147,10 +204,12 @@
       <div class="col">
         <div class="card shadow-sm card-bg">
           <div class="image-wrapper" style="position: relative;">
-            <a href="/projects/homelab" class="overlay-text"><img src="/assets/images/projects/homelab/cover.png" alt="Homelab Cover" width="100%"></a>
-              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
-                Homelab
-              </div>
+            <a href="/projects/homelab" class="overlay-text"><img src="/assets/images/projects/homelab/cover.png"
+                alt="Homelab Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Homelab</h6>
+            </div>
           </div>
           <div class="card-body">
             <p class="card-text">A self-hosted infrastructure playground running containerized services, CI/CD pipelines, and secure Cloudflare-tunneled access, built to experiment with networking, orchestration, and automation.</p>
@@ -169,10 +228,12 @@
       <div class="col">
         <div class="card shadow-sm card-bg">
           <div class="image-wrapper" style="position: relative;">
-            <a href="/projects/chat-plus-plus" class="overlay-text"><img src="/assets/images/projects/chat-pp/cover.png" alt="Chat Plus Plus Cover" width="100%"></a>
-              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
-                Chat Plus Plus
-              </div>
+            <a href="/projects/chat-plus-plus" class="overlay-text"><img src="/assets/images/projects/chat-plus-plus/cover.png"
+                alt="Chat Plus Plus Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Chat Plus Plus</h6>
+            </div>
           </div>
           <div class="card-body">
             <p class="card-text">A terminal-based chat app in modern C++ featuring a custom client-server architecture, a plugin system, and a crash-safe TUI, deployed via a Jenkins CI/CD pipeline.</p>
@@ -191,10 +252,36 @@
       <div class="col">
         <div class="card shadow-sm card-bg">
           <div class="image-wrapper" style="position: relative;">
-            <a href="/projects/last-ember" class="overlay-text"><img src="/assets/images/projects/system-breach/cover.png" alt="Last Ember Cover" width="100%"></a>
-              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
-                Last Ember
+            <a href="/projects/mini-wc" class="overlay-text"><img src="/assets/images/projects/mini-wc/cover.png"
+                alt="Mini WC Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Mini WC</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A low-level implementation of the Unix `wc` utility built entirely in x86-64 assembly to deepen my understanding of Linux system calls and file I/O.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/mini-wc" class="btn btn-sm btn-outline-tertiary">View More</a>
               </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/last-ember" class="overlay-text"><img src="/assets/images/projects/last-ember/cover.png"
+                alt="Last Ember Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Last Ember</h6>
+            </div>
           </div>
           <div class="card-body">
             <p class="card-text">A fast-paced 2D survival game built in Unity/C#, featuring random events and obstacles designed to test how long you can last, with fully custom, original art.</p>
@@ -209,14 +296,181 @@
       </div>
 
       
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/todo-app" class="overlay-text"><img src="/assets/images/projects/todo-app/cover.png"
+                alt="Todo App Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Todo App</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A responsive web to-do app that lets users manage, share, and synchronize task lists across multiple devices.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/todo-app" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
     </div>
-    <a href="/projects"><h1 style="text-decoration: none !important;" class="text-center display-6 fw-bold py-5 mt-2 link-light">View More Projects</h1></a>
+    <a href="/projects">
+      <h1 class="text-decoration-none text-center display-6 fw-bold py-5 mt-2 link-light shift-hover">View More Projects
+        →</h1>
+    </a>
   </div>
 </div>
 
-  <!-- CONTACT ME -->
+<!-- CONTACT ME ----------------------------------------------------------------------------------------------------------------->
 
-    
+<div id="contact" class="py-5 accent-bg">
+  <div class="container">
+    <h1 class="text-center display-3 fw-bold py-3">Contact Me!</h1>
+
+    <!-- CARDS -->
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <h1 class="display-6 fw-bold">Socials</h1>
+
+        
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pb-2 fa-brands fa-github fa-width-auto d-flex px-2"
+              style="font-size: 1.5em;"></i>
+            <a href="https://github.com/matheusbosc" class="link-light ">
+              <h1 class="fs-4 ps-1">GitHub (@matheusbosc)</h1>
+            </a>
+          </div>
+        </div>
+
+        
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pb-2 fa-brands fa-linkedin fa-width-auto d-flex px-2"
+              style="font-size: 1.5em;"></i>
+            <a href="https://www.linkedin.com/in/matheus-boscariol/" class="link-light ">
+              <h1 class="fs-4 ps-1">LinkedIn (@matheus-boscariol)</h1>
+            </a>
+          </div>
+        </div>
+
+        
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pb-2 fa-brands fa-itch-io fa-width-auto d-flex px-2"
+              style="font-size: 1.5em;"></i>
+            <a href="https://matheusboscariol.itch.io/" class="link-light ">
+              <h1 class="fs-4 ps-1">Itch.io (@matheusboscariol)</h1>
+            </a>
+          </div>
+        </div>
+
+        
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pb-2 fa-brands fa-youtube fa-width-auto d-flex px-2"
+              style="font-size: 1.5em;"></i>
+            <a href="https://youtube.com/@matheusbosc" class="link-light ">
+              <h1 class="fs-4 ps-1">YouTube (@matheusbosc)</h1>
+            </a>
+          </div>
+        </div>
+
+        
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pb-2 fa-brands fa-instagram fa-width-auto d-flex px-2"
+              style="font-size: 1.5em;"></i>
+            <a href="https://instagram.com/moboscariol" class="link-light ">
+              <h1 class="fs-4 ps-1">Instagram (@moboscariol)</h1>
+            </a>
+          </div>
+        </div>
+
+        
+
+      </div>
+
+      <div class="col-md-6">
+        <h1 class="display-6 fw-bold">Contact Info</h1>
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pt-2 fa-regular fa-envelope fa-width-auto d-flex px-2"
+              style="color: rgb(255, 255, 255); font-size: 1.5em;"></i>
+            <a href="mailto:matheus@matheusbosc.com" class="link-light ">
+              <h1 class="fs-2 ps-1">matheus@matheusbosc.com</h1>
+            </a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pt-2 fa-solid fa-phone fa-width-auto d-flex px-2"
+              style="color: rgb(255, 255, 255); font-size: 1.5em;"></i>
+            <a href="tel:3658551302" class="link-light ">
+              <h1 class="fs-2 ps-1">+1 (365) 855-1302</h1>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+    </main>
+
+    <div class="border-top full-width container accent-bg" style="border-color: #4967dd !important;">
+    <footer
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3 py-5 px-3 full-width">
+
+        <div class="d-inline-flex py-1 col-6 col-auto" style="max-height: 100%;">
+            <div class="d-inline-flex">
+                <a href="/" class="d-inline-flex align-items-center col-2 mb-1 mb-md-0 text-light text-decoration-none">
+                    <img class="shift-hover d-inline-flex" src="/assets/images/icon.png" style="max-width: 80%; height: auto;">
+                </a>
+                <div class="row d-inline-flex">
+                    <a href="/" class="link-light align-items-bottom text-decoration-none">
+                        <h1 class="display-3 ps-1 link-light text-decoration-none">Matheus Boscariol</h1>
+                    </a>
+                    <h1 class="fs-6">Powered By GitHub Pages & Jekyll - <a
+                            href="https://github.com/matheusbosc/matheusbosc.com" target="_blank"
+                            class="link-light">Site Code</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav col-6 col-md-auto mb-2 justify-content-right mb-md-0" style="font-size: 1.25rem;">
+
+
+            
+            <li><a href="/"
+                    class="nav-link px-4 link-tertiary">Home</a></li>
+            
+            <li><a href="/about/"
+                    class="nav-link px-4 link-light">About</a></li>
+            
+            <li><a href="/projects/"
+                    class="nav-link px-4 link-light">Projects</a></li>
+            
+        </ul>
+    </footer>
+</div>
 </body>
 
 </html>

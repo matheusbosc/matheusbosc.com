@@ -4,9 +4,9 @@ title: Home
 permalink: /
 ---
 
-<!-- HERO -->
+<!-- HERO ------------------------------------------------------------------------------------------------------------------->
 
-<div class="header-bg full-width">
+<div id="hero" class="header-bg full-width">
   <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
@@ -30,12 +30,12 @@ permalink: /
 </div>
 
 
-<!-- FEATURED PROJECTS -->
-<div class="full-width">
+<!-- FEATURED PROJECTS --------------------------------------------------------------------------------------------------------->
+<div id="featured" class="full-width">
   <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row align-items-center g-5 py-5">
       <div class="col-4 col-sm-8 col-lg-4">
-        <img src="/assets/images/projects/chat-pp/cover.png" class="d-block mx-lg-auto img-fluid"
+        <img src="/assets/images/projects/chat-plus-plus/cover.png" class="image-effect d-block mx-lg-auto img-fluid"
           alt="Chat++ Cove Image (Client UI)" width="450" height="400" loading="lazy">
       </div>
       <div class="col-lg-8">
@@ -50,7 +50,7 @@ permalink: /
     </div>
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-4 col-sm-8 col-lg-4">
-        <img src="/assets/images/projects/system-breach/cover.png" class="d-block mx-lg-auto img-fluid"
+        <img src="/assets/images/projects/system-breach/cover.png" class="image-effect d-block mx-lg-auto img-fluid"
           alt="System Breach Gameplay Screenshot" width="450" height="400" loading="lazy">
       </div>
       <div class="col-lg-8">
@@ -68,10 +68,62 @@ permalink: /
 </div>
 
 
-<!-- SKILLS -->
+<!-- SKILLS ---------------------------------------------------------------------------------------------------------------->
+
+<div id="skills" class="py-5 accent-bg">
+  <div class="container">
+    <h1 class="text-center display-3 fw-bold py-3">Skills</h1>
+
+    <!-- CARDS -->
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Game Development</h3>
+          <p>
+            Unity · C# · Blender · FMOD · Shader Graph · Photon
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Software Development</h3>
+          <p>
+            C++ · Python · x86-64 Assembly · Java · SQL · REST APIs
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Web Development</h3>
+          <p>
+            Flask · HTML · CSS · JavaScript · Bootstrap
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Systems & Infrastructure</h3>
+          <p>
+            Linux · Docker · Git/Github · Jenkins · Cloudflare
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
 
 
-<!-- OTHER PROJECTS -->
+
+<!-- OTHER PROJECTS ----------------------------------------------------------------------------------------------------->
 <div id="projects" class="album py-5">
   <div class="container">
     <h1 class="text-center display-3 fw-bold py-5">Projects</h1>
@@ -81,10 +133,12 @@ permalink: /
       <div class="col">
         <div class="card shadow-sm card-bg">
           <div class="image-wrapper" style="position: relative;">
-            <a href="{{ post.url }}" class="overlay-text"><img src="{{ post.coverpath }}" alt="{{ post.title }} Cover" width="100%"></a>
-              <div class="overlay-text" style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
-                {{ post.title }}
-              </div>
+            <a href="{{ post.url }}" class="overlay-text"><img src="/assets/images/projects/{{ post.slug }}/cover.png"
+                alt="{{ post.title }} Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">{{ post.title }}</h6>
+            </div>
           </div>
           <div class="card-body">
             <p class="card-text">{{ post.short-description }}</p>
@@ -100,8 +154,67 @@ permalink: /
 
       {% endfor %}
     </div>
-    <a href="/projects"><h1 style="text-decoration: none !important;" class="text-center display-6 fw-bold py-5 mt-2 link-light">View More Projects</h1></a>
+    <a href="/projects">
+      <h1 class="text-decoration-none text-center display-6 fw-bold py-5 mt-2 link-light shift-hover">View More Projects
+        →</h1>
+    </a>
   </div>
 </div>
 
-  <!-- CONTACT ME -->
+<!-- CONTACT ME ----------------------------------------------------------------------------------------------------------------->
+
+<div id="contact" class="py-5 accent-bg">
+  <div class="container">
+    <h1 class="text-center display-3 fw-bold py-3">Contact Me!</h1>
+
+    <!-- CARDS -->
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <h1 class="display-6 fw-bold">Socials</h1>
+
+        {% for social in site.data.socials %}
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pb-2 fa-brands {{ social.icontag }} fa-width-auto d-flex px-2"
+              style="font-size: 1.5em;"></i>
+            <a href="{{ social.url }}" class="link-light ">
+              <h1 class="fs-4 ps-1">{{ social.name }} (@{{ social.username }})</h1>
+            </a>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      </div>
+
+      <div class="col-md-6">
+        <h1 class="display-6 fw-bold">Contact Info</h1>
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pt-2 fa-regular fa-envelope fa-width-auto d-flex px-2"
+              style="color: rgb(255, 255, 255); font-size: 1.5em;"></i>
+            <a href="mailto:matheus@matheusbosc.com" class="link-light ">
+              <h1 class="fs-2 ps-1">matheus@matheusbosc.com</h1>
+            </a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pt-2 fa-solid fa-phone fa-width-auto d-flex px-2"
+              style="color: rgb(255, 255, 255); font-size: 1.5em;"></i>
+            <a href="tel:3658551302" class="link-light ">
+              <h1 class="fs-2 ps-1">+1 (365) 855-1302</h1>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

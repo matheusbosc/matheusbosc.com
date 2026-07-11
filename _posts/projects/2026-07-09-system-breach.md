@@ -8,7 +8,6 @@ category: projects
 tags: [game, programming, development, game-jam]
 
 #Project Assets
-coverpath: /assets/images/projects/system-breach/cover.png
 short-description: A pixel art stealth-action game built in Unity 6 LTS, following rogue android Unit 404 as he escapes the corporate facility of Everwatch.
  
 #Project Specs

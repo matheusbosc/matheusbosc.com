@@ -16,6 +16,8 @@
     <!-- OTHER STUFF -->
     <title> | Matheus Boscariol</title>
     <link href="/assets/styles/main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd4cf30464.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/images/icon.png">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
         <header
             class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 px-3 full-width">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none">
-                <img src="/assets/images/icon.png" style="max-width: 20%; padding-bottom: 5%; height: auto;">
+                <img class="shift-hover" src="/assets/images/icon.png" style="max-width: 20%; padding-bottom: 5%; height: auto;">
             </a>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="font-size: 1.25rem;">
@@ -42,18 +44,55 @@
             </ul>
 
             <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-3">Resume</button>
-                <button type="button" class="btn btn-primary">Contact Me</button>
+                <a type="button" class="btn btn-outline-primary me-3">Resume</a>
+                <a href="/#contact" class="btn btn-primary">Contact Me</a>
             </div>
         </header>
 </div>
 
-    <h1 id="404">404</h1>
+    <main style="flex: 1;">
+        <h1 id="404">404</h1>
 
 <p>Page not found! :(</p>
 
+    </main>
 
-    
+    <div class="border-top full-width container accent-bg" style="border-color: #4967dd !important;">
+    <footer
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3 py-5 px-3 full-width">
+
+        <div class="d-inline-flex py-1 col-6 col-auto" style="max-height: 100%;">
+            <div class="d-inline-flex">
+                <a href="/" class="d-inline-flex align-items-center col-2 mb-1 mb-md-0 text-light text-decoration-none">
+                    <img class="shift-hover d-inline-flex" src="/assets/images/icon.png" style="max-width: 80%; height: auto;">
+                </a>
+                <div class="row d-inline-flex">
+                    <a href="/" class="link-light align-items-bottom text-decoration-none">
+                        <h1 class="display-3 ps-1 link-light text-decoration-none">Matheus Boscariol</h1>
+                    </a>
+                    <h1 class="fs-6">Powered By GitHub Pages & Jekyll - <a
+                            href="https://github.com/matheusbosc/matheusbosc.com" target="_blank"
+                            class="link-light">Site Code</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav col-6 col-md-auto mb-2 justify-content-right mb-md-0" style="font-size: 1.25rem;">
+
+
+            
+            <li><a href="/"
+                    class="nav-link px-4 link-light">Home</a></li>
+            
+            <li><a href="/about/"
+                    class="nav-link px-4 link-light">About</a></li>
+            
+            <li><a href="/projects/"
+                    class="nav-link px-4 link-light">Projects</a></li>
+            
+        </ul>
+    </footer>
+</div>
 </body>
 
 </html>

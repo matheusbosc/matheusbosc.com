@@ -8,11 +8,10 @@ category: projects
 tags: [game, programming, development, game-jam]
 
 #Project Assets
-coverpath: /assets/images/projects/system-breach/cover.png
 short-description: A fast-paced 2D survival game built in Unity/C#, featuring random events and obstacles designed to test how long you can last, with fully custom, original art.
  
 #Project Specs
-platforms: [PC, Console]
+platforms: [PC]
 stack: [Unity, C#, Git, Photoshop]
 status: Completed
 role: Developer & Artist
