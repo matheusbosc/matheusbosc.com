@@ -4,14 +4,103 @@
 {% include site-head.html %}
 
 <body>
-    {% include header.html %}
+  {% include header.html %}
   <!--Add header, project info, and that stuff here-->
 
-  <main style="flex: 1;">
-        {{ content }}
-    </main>
+  <div id="hero" class="header-bg full-width">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="align-items-center g-5 py-3">
+        <h1 class="display-2 fw-bold lh-1 mb-3 text-center">{{ page.title }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Return BTN / Back BTN-->
+
+  <div class="container mt-5 align-items-center">
+    <button class="btn btn-primary btn-lg px-5 me-md-2" onclick="history.back()">← Back</button>
+  </div>
+
+  <!-- Project Info:
+      
+      Platform
+      Role
+      Tags
+      Stack
+      Status
+      Important Dates
+  
+  -->
+
+  <div id="info" class="full-width">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="align-items-center g-5 py-3">
+
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+
+            <div class="marquee-group">
+              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4 ">
+                Stack:
+              </div>
+              {% for tech in page.stack %}
+              <div class="d-inline-flex small-tag-tile">
+                {{ tech }}
+              </div>
+              {% endfor %}
+
+              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                Tags:
+              </div>
+              {% for tag in page.tags %}
+              <div class="d-inline-flex small-tag-tile">
+                {{ tag }}
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="marquee-group">
+              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                Stack:
+              </div>
+              {% for tech in page.stack %}
+              <div class="d-inline-flex small-tag-tile">
+                {{ tech }}
+              </div>
+              {% endfor %}
+
+              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                Tags:
+              </div>
+              {% for tag in page.tags %}
+              <div class="d-inline-flex small-tag-tile">
+                {{ tag }}
+              </div>
+              {% endfor %}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="content" class="full-width">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="align-items-center g-5 py-3">
+        <article class="project" style="flex: 1;">
+          {{ content }}
+        </article>
+      </div>
+    </div>
+  </div>
+
+
 
   <!-- add sidebar with images here -->
+
 
   {% include footer.html %}
 </body>
