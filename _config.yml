@@ -14,13 +14,9 @@ social:
   - https://instagram.com/moboscariol
   - https://matheusboscariol.itch.io/
 
-jekyll_analytics:
-  GoogleAnalytics:
-    id: G-8LRKG4HLBE
-    anonymizeIp: false
+google-analytics: G-8LRKG4HLBE
 
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-analytics
