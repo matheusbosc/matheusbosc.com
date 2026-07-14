@@ -13,5 +13,4 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem 'jekyll-admin'
   gem 'jekyll-analytics'
-  gem "hanuman"
 end
