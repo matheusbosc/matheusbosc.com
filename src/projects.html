@@ -1,0 +1,50 @@
+---
+layout: default
+title: Projects
+description: A collection of games, software, and systems projects built by Matheus — spanning Unity, C++, x86 assembly, and self-hosted infrastructure.
+permalink: /projects/
+---
+
+<!-- HERO ------------------------------------------------------------------------------------------------------------------->
+
+<div id="hero" class="header-bg full-width">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="align-items-center g-5 py-3">
+        <h1 class="display-2 fw-bold lh-1 mb-3 text-center">My Projects</h1>
+    </div>
+  </div>
+</div>
+
+
+<div id="projects" class="album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% assign sorted = site.posts | sort: "title" %}
+      {% for post in sorted %}
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="{{ post.url }}" class="overlay-text"><img src="/assets/images/projects/{{ post.slug }}/cover.png"
+                alt="{{ post.title }} Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">{{ post.title }}</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ post.short-description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="{{ post.url }}" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: {{ post.status }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>

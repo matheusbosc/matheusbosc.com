@@ -1,0 +1,18 @@
+timezone: America/Totonto
+layout: default
+permalink: /:categories/:slug
+
+title: Matheus Boscariol
+name: Matheus Boscariol
+description: High school student and indie game developer building software, games, and a homelab — currently co-running a studio working toward a 2027 game release.
+url: https://matheusbosc.com
+logo: /assets/icon.png
+social:
+  - https://github.com/matheusbosc
+  - https://www.linkedin.com/in/matheus-boscariol/
+  - https://youtube.com/@matheusbosc
+  - https://instagram.com/moboscariol
+  - https://matheusboscariol.itch.io/
+
+plugins:
+  - jekyll-seo-tag

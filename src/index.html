@@ -1,0 +1,220 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
+<!-- HERO ------------------------------------------------------------------------------------------------------------------->
+
+<div id="hero" class="header-bg full-width">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/assets/images/icon.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="450"
+          height="400" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Matheus Boscariol</h1>
+        <p class="lead">Matheus is a high school student who splits his time between competitive rowing, volleyball,
+          saxophone, and building things — games, software, and a homelab that doubles as his personal testing ground.
+          After a $5k game jam, he co-founded his own studio to bring their game to life, on track for a 2027
+          release. But what really drives how he creates, learns, and solves problems? That's the part you'll want to
+          read for yourself.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="#projects" class="btn btn-primary btn-lg px-4 me-md-2">View Projects</a>
+          <a href="/about" class="btn btn-outline-secondary btn-lg px-4">About Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FEATURED PROJECTS --------------------------------------------------------------------------------------------------------->
+<div id="featured" class="full-width">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-4 col-sm-8 col-lg-4">
+        <img src="/assets/images/projects/chat-plus-plus/cover.png" class="image-effect d-block mx-lg-auto img-fluid"
+          alt="Chat++ Cove Image (Client UI)" width="450" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Chat++</h1>
+        <p class="lead">Chat++ is a terminal-based chat app in modern C++ with a custom client-server architecture, a
+          modular plugin system, and a crash-safe FTXUI interface — built with a Jenkins CI/CD pipeline for
+          cross-platform delivery.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/projects/chat-plus-plus" class="btn btn-primary btn-lg px-4 me-md-2">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-4 col-sm-8 col-lg-4">
+        <img src="/assets/images/projects/system-breach/cover.png" class="image-effect d-block mx-lg-auto img-fluid"
+          alt="System Breach Gameplay Screenshot" width="450" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold lh-1 mb-3">System Breach</h1>
+        <p class="lead">System Breach is a pixel art stealth-action game built in Unity 6 LTS, following Unit 404, a
+          rogue android escaping the corporate facility of Everwatch. Blending stealth and action gameplay with a
+          branching moral ending, it's being developed by Trust The Process LLC, an indie studio with a globally
+          distributed team.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/projects/system-breach" class="btn btn-primary btn-lg px-4 me-md-2">View More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SKILLS ---------------------------------------------------------------------------------------------------------------->
+
+<div id="skills" class="py-5 accent-bg">
+  <div class="container">
+    <h1 class="text-center display-3 fw-bold py-3">Skills</h1>
+
+    <!-- CARDS -->
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Game Development</h3>
+          <p>
+            Unity · C# · Blender · FMOD · Shader Graph · Photon
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Software Development</h3>
+          <p>
+            C++ · Python · x86-64 Assembly · Java · SQL · REST APIs
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Web Development</h3>
+          <p>
+            Flask · HTML · CSS · JavaScript · Bootstrap
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="skill-tile">
+          <h3>Systems & Infrastructure</h3>
+          <p>
+            Linux · Docker · Git/Github · Jenkins · Cloudflare
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- OTHER PROJECTS ----------------------------------------------------------------------------------------------------->
+<div id="projects" class="album py-5">
+  <div class="container">
+    <h1 class="text-center display-3 fw-bold py-5">Projects</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for post in site.posts limit: 6 %}
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="{{ post.url }}" class="overlay-text"><img src="/assets/images/projects/{{ post.slug }}/cover.png"
+                alt="{{ post.title }} Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">{{ post.title }}</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ post.short-description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="{{ post.url }}" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: {{ post.status }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+    <a href="/projects">
+      <h1 class="text-decoration-none text-center display-6 fw-bold py-5 mt-2 link-light shift-hover">View More Projects
+        →</h1>
+    </a>
+  </div>
+</div>
+
+<!-- CONTACT ME ----------------------------------------------------------------------------------------------------------------->
+
+<div id="contact" class="py-5 accent-bg">
+  <div class="container">
+    <h1 class="text-center display-3 fw-bold py-3">Contact Me!</h1>
+
+    <!-- CARDS -->
+    <div class="row py-3">
+
+      <div class="col-md-6">
+        <h1 class="display-6 fw-bold">Socials</h1>
+
+        {% for social in site.data.socials %}
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pb-2 fa-brands {{ social.icontag }} fa-width-auto d-flex px-2"
+              style="font-size: 1.5em;"></i>
+            <a href="{{ social.url }}" class="link-light ">
+              <h1 class="fs-4 ps-1">{{ social.name }} (@{{ social.username }})</h1>
+            </a>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      </div>
+
+      <div class="col-md-6">
+        <h1 class="display-6 fw-bold">Contact Info</h1>
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pt-2 fa-regular fa-envelope fa-width-auto d-flex px-2"
+              style="color: rgb(255, 255, 255); font-size: 1.5em;"></i>
+            <a href="mailto:matheus@matheusbosc.com" class="link-light ">
+              <h1 class="fs-2 ps-1">matheus@matheusbosc.com</h1>
+            </a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center py-1" style="max-height: 100%;">
+          <div class="d-flex twist-grow-hover">
+            <i class="pt-2 fa-solid fa-phone fa-width-auto d-flex px-2"
+              style="color: rgb(255, 255, 255); font-size: 1.5em;"></i>
+            <a href="tel:3658551302" class="link-light ">
+              <h1 class="fs-2 ps-1">+1 (365) 855-1302</h1>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

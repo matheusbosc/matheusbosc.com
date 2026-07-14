@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+
+<head>
+    <!-- BOOTSTRAP STUFF -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- SEO STUFF -->
+
+    <!-- OTHER STUFF -->
+    
+    <link href="/assets/styles/main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd4cf30464.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/images/icon.png">
+
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Mini WC | Matheus Boscariol</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Mini WC" />
+<meta name="author" content="matheus" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A minimal recreation of the Linux wc utility, written in x86 assembly, built to learn low-level systems programming and memory management." />
+<meta name="twitter:description" property="og:description" content="A minimal recreation of the Linux wc utility, written in x86 assembly, built to learn low-level systems programming and memory management." />
+<link rel="canonical" href="http://localhost:4000/projects/mini-wc" />
+<meta property="og:url" content="http://localhost:4000/projects/mini-wc" />
+<meta property="og:site_name" content="Matheus Boscariol" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-02-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Mini WC" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"matheus"},"dateModified":"2026-02-13T00:00:00+00:00","datePublished":"2026-02-13T00:00:00+00:00","description":"A minimal recreation of the Linux wc utility, written in x86 assembly, built to learn low-level systems programming and memory management.","headline":"Mini WC","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/mini-wc"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icon.png"},"name":"matheus"},"url":"http://localhost:4000/projects/mini-wc"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+  <div class="full-width container header-bg">
+        <header
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 px-3 full-width">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none">
+                <img class="shift-hover" src="/assets/images/icon.png" style="max-width: 20%; padding-bottom: 5%; height: auto;">
+            </a>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="font-size: 1.25rem;">
+
+
+                
+                <li><a href="/"
+                        class="nav-link px-4 link-light">Home</a></li>
+                
+                <li><a href="/about/"
+                        class="nav-link px-4 link-light">About</a></li>
+                
+                <li><a href="/projects/"
+                        class="nav-link px-4 link-light">Projects</a></li>
+                
+            </ul>
+
+            <div class="col-md-3 text-end">
+                <a href="/assets/matheusbosc-resume.pdf" target="_blank" class="btn btn-outline-primary me-3">Resume</a>
+                <a href="/#contact" class="btn btn-primary">Contact Me</a>
+            </div>
+        </header>
+</div>
+  <!--Add header, project info, and that stuff here-->
+
+  <div id="hero" class="header-bg full-width">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="align-items-center g-5 py-3">
+        <h1 class="display-2 fw-bold lh-1 mb-3 text-center">Mini WC</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Return BTN / Back BTN-->
+
+  <div class="container mt-5 align-items-center d-inline-flex justify-content-between">
+    <div class=" d-inline-flex justify-content-start">
+      <button class="btn btn-primary btn-lg px-5 me-md-2" onclick="history.back()">← Back</button>
+    </div>
+    <div class=" d-inline-flex justify-content-end">
+      
+
+      
+      
+
+
+
+      <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="https://github.com/matheusbosc/mini-wc" target="_blank">
+        <i class="col col-auto pb-2 pt-2 fa-brands fa-github fa-width-auto d-flex px-2"
+          style="font-size: 1.2em;"></i>
+
+        <div class="col col-auto pt-1 ps-2">Github Repo</div>
+      </a>
+
+
+
+       <!-- ERROR HERE -->
+
+      
+
+      
+    </div>
+  </div>
+
+  <!-- Project Info:
+      
+      Platform
+      Role
+      Tags
+      Stack
+      Status
+      Important Dates
+  
+  -->
+
+  <div id="info" class="full-width">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="align-items-center g-5 py-3">
+
+        <!-- Stack and Tags-->
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+
+            <div class="marquee-group">
+              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4 ">
+                Stack:
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                x86-64 Assembly
+              </div>
+              
+
+              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                Tags:
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                programming
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                development
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                utility
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                system
+              </div>
+              
+            </div>
+
+            <div class="marquee-group">
+              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                Stack:
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                x86-64 Assembly
+              </div>
+              
+
+              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                Tags:
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                programming
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                development
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                utility
+              </div>
+              
+              <div class="d-inline-flex small-tag-tile">
+                system
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+
+        <br>
+
+        <!-- Platforms, role, status, and maybe important dates-->
+
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+
+            <div class="marquee-group">
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Role(s): </strong>
+                <div class="ps-2">Developer</div>
+              </div>
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Platform(s): </strong>
+                
+
+                
+
+                <div class="ps-2">PC</div>
+
+                
+
+                
+              </div>
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Status: </strong>
+                <div class="ps-2">Completed</div>
+              </div>
+
+              
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Date Completed: </strong>
+                <div class="ps-2">2026-02-13</div>
+              </div>
+
+              
+            </div>
+
+            <div class="marquee-group">
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Role(s): </strong>
+                <div class="ps-2">Developer</div>
+              </div>
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Platform(s): </strong>
+                
+
+                
+
+                <div class="ps-2">PC</div>
+
+                
+
+                
+              </div>
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Status: </strong>
+                <div class="ps-2">Completed</div>
+              </div>
+
+              
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Date Completed: </strong>
+                <div class="ps-2">2026-02-13</div>
+              </div>
+
+              
+            </div>
+
+            <div class="marquee-group">
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Role(s): </strong>
+                <div class="ps-2">Developer</div>
+              </div>
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Platform(s): </strong>
+                
+
+                
+
+                <div class="ps-2">PC</div>
+
+                
+
+                
+              </div>
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Status: </strong>
+                <div class="ps-2">Completed</div>
+              </div>
+
+              
+
+              
+
+              
+
+              <div class="d-inline-flex fs-4 fw-normal px-5">
+                <strong>Date Completed: </strong>
+                <div class="ps-2">2026-02-13</div>
+              </div>
+
+              
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="content" class="full-width">
+    <div class="container col-xxl-8 px-4 pb-5">
+      <div class="row">
+        <div class="col col-8 align-items-center pb-3">
+          <article class="project" style="flex: 1;">
+            <h2 id="the-course-behind-it">The Course Behind It</h2>
+
+<p>This one didn’t come from a jam or a class — it came from a course I asked Claude to build for me. I wanted to actually learn assembly and get a real understanding of systems design, so I asked for something structured like a college course: lectures, problem sets, assignments, tests, exams, the whole format. Mini-WC was the final project for that course.</p>
+
+<h2 id="what-it-does">What It Does</h2>
+
+<p>Mini-WC is exactly what it sounds like — a stripped-down version of the Linux <code class="language-plaintext highlighter-rouge">wc</code> utility, written in x86 assembly using FASM. Real <code class="language-plaintext highlighter-rouge">wc</code> counts lines, words, characters, and bytes. Mine only counts bytes — hence <em>mini</em>.</p>
+
+<p>Small scope, on purpose. At this level, even “just count bytes” is a real exercise in low-level programming, with none of the abstractions a higher-level language would normally hide from you.</p>
+
+<h2 id="the-hard-part">The Hard Part</h2>
+
+<p>Assembly doesn’t forgive vague debugging. There’s no stepping through readable variable names or clean error messages — just registers, memory addresses, and instructions.</p>
+
+<ul>
+  <li><strong>Debugging</strong> meant going line by line, watching what was actually sitting in each register at every step, and piecing together what the code was doing versus what I intended it to do. Hours of that.</li>
+  <li><strong>Efficiency</strong> was its own battle — early versions had plenty of redundant lines doing work that didn’t need to happen at all.</li>
+  <li><strong>Memory leaks</strong> showed up more than once, and each one had to be tracked down and fixed by hand, since nothing here cleans up after you automatically.</li>
+</ul>
+
+<h2 id="why-it-mattered">Why It Mattered</h2>
+
+<p>Mini-WC is small in scope, but it’s the project that actually forced me to understand what’s happening underneath the languages I normally write in — registers, memory, and the raw mechanics of a program instead of the abstractions built on top of them.</p>
+
+          </article>
+        </div>
+
+        <div class="col">
+          
+
+          <img src="/assets/images/projects/mini-wc/cover.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
+            data-full-src="/assets/images/projects/mini-wc/cover.png" data-name="cover.png" data-bs-toggle="modal"
+            data-bs-target="#image-modal">
+
+          
+
+          <img src="/assets/images/projects/mini-wc/img1.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
+            data-full-src="/assets/images/projects/mini-wc/img1.png" data-name="img1.png" data-bs-toggle="modal"
+            data-bs-target="#image-modal">
+
+          
+
+          <img src="/assets/images/projects/mini-wc/img2.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
+            data-full-src="/assets/images/projects/mini-wc/img2.png" data-name="img2.png" data-bs-toggle="modal"
+            data-bs-target="#image-modal">
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="image-modal">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content image-modal">
+
+        <div class="px-5 pt-5 d-inline-flex justify-content-between">
+          <h4 class="display-5" id="image-modal-title">Image Name</h4>
+          <a class="link-light text-decoration-none cursor-pointer" data-bs-dismiss="modal"><i class="col col-auto pb-2 fa-regular fa-circle-xmark fa-width-auto d-flex px-2 pt-2" style="font-size: 2em;"></i></a>
+        </div>
+
+        <div class="modal-body d-flex justify-content-center align-items-center">
+          <img style="width: 70%; height: 70%; object-fit: contain;" id="image-modal-img" src="">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="border-top full-width container accent-bg" style="border-color: #4967dd !important;">
+    <footer
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3 py-5 px-3 full-width">
+
+        <div class="d-inline-flex py-1 col-6 col-auto" style="max-height: 100%;">
+            <div class="d-inline-flex">
+                <a href="/" class="d-inline-flex align-items-center col-2 mb-1 mb-md-0 text-light text-decoration-none">
+                    <img class="shift-hover d-inline-flex" src="/assets/images/icon.png" style="max-width: 80%; height: auto;">
+                </a>
+                <div class="row d-inline-flex">
+                    <a href="/" class="link-light align-items-bottom text-decoration-none">
+                        <h1 class="display-3 ps-1 link-light text-decoration-none">Matheus Boscariol</h1>
+                    </a>
+                    <h1 class="fs-6">Powered By GitHub Pages & Jekyll - <a
+                            href="https://github.com/matheusbosc/matheusbosc.com" target="_blank"
+                            class="link-light">Site Code</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav col-6 col-md-auto mb-2 justify-content-right mb-md-0" style="font-size: 1.25rem;">
+
+
+            
+            <li><a href="/"
+                    class="nav-link px-4 link-light">Home</a></li>
+            
+            <li><a href="/about/"
+                    class="nav-link px-4 link-light">About</a></li>
+            
+            <li><a href="/projects/"
+                    class="nav-link px-4 link-light">Projects</a></li>
+            
+        </ul>
+    </footer>
+</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const thumbs = document.querySelectorAll('.project-thumb');
+      const modalImg = document.getElementById('image-modal-img');
+      const modalTitle = document.getElementById('image-modal-title');
+
+      thumbs.forEach(function (thumb) {
+        thumb.addEventListener('click', function () {
+          modalImg.src = thumb.dataset.fullSrc;
+          modalTitle.textContent = thumb.dataset.name;
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

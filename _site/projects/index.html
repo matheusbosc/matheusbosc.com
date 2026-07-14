@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+
+<head>
+    <!-- BOOTSTRAP STUFF -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- SEO STUFF -->
+
+    <!-- OTHER STUFF -->
+    
+    <link href="/assets/styles/main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd4cf30464.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/images/icon.png">
+
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Projects | Matheus Boscariol</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Projects" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A collection of games, software, and systems projects built by Matheus — spanning Unity, C++, x86 assembly, and self-hosted infrastructure." />
+<meta name="twitter:description" property="og:description" content="A collection of games, software, and systems projects built by Matheus — spanning Unity, C++, x86 assembly, and self-hosted infrastructure." />
+<link rel="canonical" href="http://localhost:4000/projects/" />
+<meta property="og:url" content="http://localhost:4000/projects/" />
+<meta property="og:site_name" content="Matheus Boscariol" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Projects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A collection of games, software, and systems projects built by Matheus — spanning Unity, C++, x86 assembly, and self-hosted infrastructure.","headline":"Projects","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icon.png"}},"url":"http://localhost:4000/projects/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+    <div class="full-width container header-bg">
+        <header
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 px-3 full-width">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none">
+                <img class="shift-hover" src="/assets/images/icon.png" style="max-width: 20%; padding-bottom: 5%; height: auto;">
+            </a>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="font-size: 1.25rem;">
+
+
+                
+                <li><a href="/"
+                        class="nav-link px-4 link-light">Home</a></li>
+                
+                <li><a href="/about/"
+                        class="nav-link px-4 link-light">About</a></li>
+                
+                <li><a href="/projects/"
+                        class="nav-link px-4 link-secondary">Projects</a></li>
+                
+            </ul>
+
+            <div class="col-md-3 text-end">
+                <a href="/assets/matheusbosc-resume.pdf" target="_blank" class="btn btn-outline-primary me-3">Resume</a>
+                <a href="/#contact" class="btn btn-primary">Contact Me</a>
+            </div>
+        </header>
+</div>
+
+    <main style="flex: 1;">
+        <!-- HERO ------------------------------------------------------------------------------------------------------------------->
+
+<div id="hero" class="header-bg full-width">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="align-items-center g-5 py-3">
+        <h1 class="display-2 fw-bold lh-1 mb-3 text-center">My Projects</h1>
+    </div>
+  </div>
+</div>
+
+
+<div id="projects" class="album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/chat-plus-plus" class="overlay-text"><img src="/assets/images/projects/chat-plus-plus/cover.png"
+                alt="Chat Plus Plus Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Chat Plus Plus</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A terminal-based chat app in modern C++ featuring a custom client-server architecture, a plugin system, and a crash-safe TUI, deployed via a Jenkins CI/CD pipeline.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/chat-plus-plus" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/homelab" class="overlay-text"><img src="/assets/images/projects/homelab/cover.png"
+                alt="Homelab Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Homelab</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A self-hosted infrastructure playground running containerized services, CI/CD pipelines, and secure Cloudflare-tunneled access, built to experiment with networking, orchestration, and automation.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/homelab" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Ongoing</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/last-ember" class="overlay-text"><img src="/assets/images/projects/last-ember/cover.png"
+                alt="Last Ember Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Last Ember</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A fast-paced 2D survival game built in Unity/C#, featuring random events and obstacles designed to test how long you can last, with fully custom, original art.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/last-ember" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/mini-wc" class="overlay-text"><img src="/assets/images/projects/mini-wc/cover.png"
+                alt="Mini WC Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Mini WC</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A low-level implementation of the Unix `wc` utility built entirely in x86-64 assembly to deepen my understanding of Linux system calls and file I/O.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/mini-wc" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/space-game" class="overlay-text"><img src="/assets/images/projects/space-game/cover.png"
+                alt="Space Game Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Space Game</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A fast-paced 2D/3D space shooter where players explore, battle enemies, and upgrade their ship to survive increasingly difficult waves.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/space-game" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/system-breach" class="overlay-text"><img src="/assets/images/projects/system-breach/cover.png"
+                alt="System Breach Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">System Breach</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A pixel art stealth-action game built in Unity 6 LTS, following rogue android Unit 404 as he escapes the corporate facility of Everwatch.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/system-breach" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Ongoing</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col">
+        <div class="card shadow-sm card-bg">
+          <div class="image-wrapper" style="position: relative;">
+            <a href="/projects/todo-app" class="overlay-text"><img src="/assets/images/projects/todo-app/cover.png"
+                alt="Todo App Cover" width="100%"></a>
+            <div class="text-shadow overlay-text"
+              style="position: absolute; bottom: 10px; left: 10px; font-size: 150%;">
+              <h4 class="fw-bold">Todo App</h6>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">A responsive web to-do app that lets users manage, share, and synchronize task lists across multiple devices.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/projects/todo-app" class="btn btn-sm btn-outline-tertiary">View More</a>
+              </div>
+              <small class="text-muted">Status: Completed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+    </main>
+
+    <div class="border-top full-width container accent-bg" style="border-color: #4967dd !important;">
+    <footer
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3 py-5 px-3 full-width">
+
+        <div class="d-inline-flex py-1 col-6 col-auto" style="max-height: 100%;">
+            <div class="d-inline-flex">
+                <a href="/" class="d-inline-flex align-items-center col-2 mb-1 mb-md-0 text-light text-decoration-none">
+                    <img class="shift-hover d-inline-flex" src="/assets/images/icon.png" style="max-width: 80%; height: auto;">
+                </a>
+                <div class="row d-inline-flex">
+                    <a href="/" class="link-light align-items-bottom text-decoration-none">
+                        <h1 class="display-3 ps-1 link-light text-decoration-none">Matheus Boscariol</h1>
+                    </a>
+                    <h1 class="fs-6">Powered By GitHub Pages & Jekyll - <a
+                            href="https://github.com/matheusbosc/matheusbosc.com" target="_blank"
+                            class="link-light">Site Code</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav col-6 col-md-auto mb-2 justify-content-right mb-md-0" style="font-size: 1.25rem;">
+
+
+            
+            <li><a href="/"
+                    class="nav-link px-4 link-light">Home</a></li>
+            
+            <li><a href="/about/"
+                    class="nav-link px-4 link-light">About</a></li>
+            
+            <li><a href="/projects/"
+                    class="nav-link px-4 link-tertiary">Projects</a></li>
+            
+        </ul>
+    </footer>
+</div>
+</body>
+
+</html>

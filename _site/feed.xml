@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-07-14T02:13:35+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Matheus Boscariol</title><subtitle>High school student and indie game developer building software, games, and a homelab — currently co-running a studio working toward a 2027 game release.</subtitle><entry><title type="html">Homelab</title><link href="http://localhost:4000/projects/homelab" rel="alternate" type="text/html" title="Homelab" /><published>2026-07-09T00:00:00+00:00</published><updated>2026-07-09T00:00:00+00:00</updated><id>http://localhost:4000/projects/homelab</id><content type="html" xml:base="http://localhost:4000/projects/homelab"><![CDATA[<h2 id="how-it-started">How It Started</h2>
+
+<p>It started small — Jellyfin, set up to stop manually organizing my media library by hand. For a while, that was the whole homelab. One service, doing one job.</p>
+
+<p>Then I tore it all down.</p>
+
+<h2 id="starting-over-properly">Starting Over, Properly</h2>
+
+<p>I made the call to install Proxmox VE, mainly so a crash in one service couldn’t take the whole setup down with it. Once that foundation was in place, I rebuilt from scratch:</p>
+
+<ul>
+  <li><strong>Jellyfin</strong> came back first, same job as before</li>
+  <li><strong>Portainer</strong> followed, to make spinning up new Docker containers far less painful</li>
+  <li><strong>Vaultwarden</strong> came next — I’d been using 1Password, but ran into issues keeping it updated (possibly a trial that lapsed, honestly don’t remember exactly why). Self-hosting my own password manager solved that permanently.</li>
+</ul>
+
+<p>From there, it snowballed the way homelabs tend to:</p>
+
+<ul>
+  <li><strong>Jellyseerr</strong> and the <strong><em>arr</em> suite</strong> joined to round out the media side</li>
+  <li>I started hosting my own dev projects too — including the servers behind <a href="/projects/chat-plus-plus">Chat++</a> and my <a href="/projects/todo-app">TODO app</a></li>
+  <li>Game servers followed too, for whatever I’m playing with friends at the time</li>
+</ul>
+
+<h2 id="networking--security">Networking &amp; Security</h2>
+
+<p>Once the homelab had more than a couple of services running, keeping them isolated and secure became its own project:</p>
+
+<ul>
+  <li><strong>Network segmentation</strong> — I split services across VLANs and Docker networks, so nothing on one part of the network can interfere with (or compromise) another.</li>
+  <li><strong>Secure remote access</strong> — instead of exposing ports directly, I set up Cloudflare Tunnels with a zero-trust access model, so I can reach my services from anywhere without opening up my home network to the internet.</li>
+  <li><strong>Resource optimization</strong> — with limited hardware, I leaned on virtualization and Docker to squeeze as much out of what I have as possible, rather than running everything bare-metal.</li>
+</ul>
+
+<h2 id="monitoring--automation">Monitoring &amp; Automation</h2>
+
+<p>The homelab isn’t just “set it and forget it” — it’s fully automated where it can be, and I keep an eye on it where it can’t:</p>
+
+<ul>
+  <li>CI/CD pipelines handle deployment and updates for the services and projects I host myself</li>
+  <li>Logging and monitoring give me visibility into what’s actually happening across the stack, instead of finding out something broke after the fact</li>
+</ul>
+
+<h2 id="the-hardware">The Hardware</h2>
+
+<p>None of this runs on anything fancy. My main server is an old HP laptop — low on RAM and storage, but it’s never given me a real problem, and it’s been running solid the whole time.</p>
+
+<p>Alongside it, I repurposed an old Asus Chromebox that was just sitting around the house, unused. It’s now running Home Assistant OS, powering a dashboard for my bedroom.</p>
+
+<h2 id="what-ive-learned">What I’ve Learned</h2>
+
+<p>This homelab has been less about any one service and more about the practice of running infrastructure myself:</p>
+
+<ul>
+  <li>Real, hands-on experience with network security and service orchestration — the kind of thing that’s hard to learn without actually breaking something first</li>
+  <li>A better sense of the trade-off between simplicity and flexibility — every homelab decision is a balance between “easy to maintain” and “does exactly what I want”</li>
+  <li>Practice with monitoring, logging, and troubleshooting in an environment where I’m the only one responsible for fixing it</li>
+</ul>
+
+<p>It’s not a big setup, but it works — and I’m hoping to keep expanding it over time.</p>]]></content><author><name>matheus</name></author><category term="projects" /><category term="infrastructure" /><category term="cloud" /><category term="devops" /><category term="server" /><category term="linux" /><summary type="html"><![CDATA[A self-hosted infrastructure playground running containerized services, CI/CD pipelines, and secure Cloudflare-tunneled access.]]></summary></entry><entry><title type="html">System Breach</title><link href="http://localhost:4000/projects/system-breach" rel="alternate" type="text/html" title="System Breach" /><published>2026-07-09T00:00:00+00:00</published><updated>2026-07-09T00:00:00+00:00</updated><id>http://localhost:4000/projects/system-breach</id><content type="html" xml:base="http://localhost:4000/projects/system-breach"><![CDATA[<h2 id="how-the-team-came-together">How the Team Came Together</h2>
+
+<p>Like most game jam teams, it started scattered. Two people found each other first, then a third joined. I was still looking for a team of my own, so I posted in the jam’s Discord server — someone reached out, and I joined what would become our core group. From there, we filled the remaining gaps:</p>
+
+<ul>
+  <li>An artist joined when we needed someone for visuals</li>
+  <li>A composer/sound designer came on board not long after, for music and SFX</li>
+</ul>
+
+<p>That was the full team — five people who’d never worked together before the jam, now building a game together.</p>
+
+<h2 id="finding-the-idea">Finding the Idea</h2>
+
+<p>We didn’t walk in with a concept — we brainstormed. Throwing out whatever ideas came to mind, seeing what stuck, until a few pieces clicked together into something we actually liked. That became our base idea. Once the jam’s theme was revealed, we bent that idea to fit it, and System Breach started taking shape from there.</p>
+
+<p>The result: <strong>Unit 404</strong>, an android breaking free from the corporate control of <strong>Everwatch</strong>, blending stealth and action gameplay with a branching moral ending — the player’s choices shaping how the story closes.</p>
+
+<h2 id="why-we-kept-going">Why We Kept Going</h2>
+
+<p>We didn’t win the jam. But by the time it ended, none of us wanted to stop:</p>
+
+<ul>
+  <li>Every one of us had wanted to actually <em>ship</em> a game before — not just prototype and move on</li>
+  <li>We genuinely liked what we’d built, both the game itself and how well we worked as a team</li>
+</ul>
+
+<p>That was enough to turn a 48-hour project into <strong>Trust The Process</strong>, and System Breach into something we’re still building toward release.</p>
+
+<h2 id="where-it-stands-now">Where It Stands Now</h2>
+
+<ul>
+  <li><strong>Platform:</strong> PC, releasing on Steam</li>
+  <li><strong>Engine:</strong> Unity 6 LTS</li>
+  <li><strong>Genre:</strong> Pixel art stealth-action</li>
+  <li><strong>Target:</strong> March 2027 release planned</li>
+</ul>
+
+<p>The team’s grown since the jam too — it’s now myself, another developer, Sam on 3D art, and Rea on sound. Along the way, I’ve also taken on store and capsule art myself, after our original 2D artist moved on to other things.</p>
+
+<p>It didn’t win a jam. But it’s turned into a studio, a team, and a game we’re actually proud to be finishing.</p>]]></content><author><name>matheus</name></author><category term="projects" /><category term="game" /><category term="programming" /><category term="development" /><category term="game-jam" /><summary type="html"><![CDATA[A pixel art stealth-action game built in Unity 6 LTS, following rogue android Unit 404 as he escapes the corporate facility of Everwatch.]]></summary></entry><entry><title type="html">Chat Plus Plus</title><link href="http://localhost:4000/projects/chat-plus-plus" rel="alternate" type="text/html" title="Chat Plus Plus" /><published>2026-03-01T00:00:00+00:00</published><updated>2026-03-01T00:00:00+00:00</updated><id>http://localhost:4000/projects/chat-plus-plus</id><content type="html" xml:base="http://localhost:4000/projects/chat-plus-plus"><![CDATA[<h2 id="the-idea">The Idea</h2>
+
+<p>I wanted a break from the routine I’d fallen into with Unity — same engine, same patterns, project after project. C++ had been on my radar for a while; it’s one of the most widely used languages out there, and I figured it was worth learning properly, both for the challenge and for what it’d mean for my future as a developer.</p>
+
+<p>But I didn’t want to build another boring starter project just to check a box. After a few tutorials to get the basic syntax down, I decided I wanted something with real substance — something that would force me to actually understand the language instead of just copying examples. Networking felt like the right kind of hard, and from there, the idea for a chat application was obvious.</p>
+
+<h2 id="building-it">Building It</h2>
+
+<p>I started with the core: a server, and a CLI client that could connect to it. Once that base was working, I kept layering features on top:</p>
+
+<ul>
+  <li>Rooms</li>
+  <li>Nicknames</li>
+  <li>A proper terminal UI</li>
+</ul>
+
+<p>Somewhere in there, the codebase started to get messy, so before adding more, I stopped and refactored everything to be modular first. That decision paid off once I moved into building the client, which had its own backend and frontend logic tied together through a main class and a set of listeners.</p>
+
+<p>A few things turned out to be harder than expected:</p>
+
+<ul>
+  <li><strong>Real-time communication</strong> — building a stable, low-latency custom client-server architecture was the core technical challenge, and everything else (rooms, nicknames, the plugin system) built on top of it once it worked reliably.</li>
+  <li><strong>The interface</strong> — I built it with FTXUI, and managing a dynamic terminal UI meant designing a state-driven flow with event-triggered loop restarts to transition cleanly between screens.</li>
+  <li><strong>Shutdown handling</strong> — blocking sockets and background threads don’t die gracefully by default, so I had to implement proper <code class="language-plaintext highlighter-rouge">shutdown()</code>/<code class="language-plaintext highlighter-rouge">close()</code> calls, atomic run flags, and controlled thread joins to guarantee the app could exit safely every time.</li>
+</ul>
+
+<p>Eventually, it was done. Or so I thought.</p>
+
+<h2 id="coming-back-to-it">Coming Back to It</h2>
+
+<p>A few weeks later, I was deep into DevOps and CI/CD experiments on my <a href="/projects/homelab">homelab</a>, and Chat++ became the perfect testbed. I:</p>
+
+<ul>
+  <li>Installed Jenkins and set up a full build/deploy workflow — which took longer than expected, but taught me a lot about structuring CI/CD for a C++ project</li>
+  <li>Containerized the app with Docker, and wired that build into the same workflow</li>
+</ul>
+
+<p>That’s when it actually felt finished.</p>
+
+<h2 id="what-i-learned">What I Learned</h2>
+
+<p>Chat++ taught me more than just C++ syntax and CMake:</p>
+
+<ul>
+  <li>My first real experience building a networked application and handling multithreading safely — trickier than I expected going in</li>
+  <li>A deeper understanding of CI/CD, this time applied to a language and build system I’d never worked with before</li>
+</ul>]]></content><author><name>matheus</name></author><category term="projects" /><category term="programming" /><category term="development" /><category term="utility" /><summary type="html"><![CDATA[A terminal-based chat app in modern C++, featuring a custom client-server architecture, a plugin system, and a crash-safe TUI.]]></summary></entry><entry><title type="html">Mini WC</title><link href="http://localhost:4000/projects/mini-wc" rel="alternate" type="text/html" title="Mini WC" /><published>2026-02-13T00:00:00+00:00</published><updated>2026-02-13T00:00:00+00:00</updated><id>http://localhost:4000/projects/mini-wc</id><content type="html" xml:base="http://localhost:4000/projects/mini-wc"><![CDATA[<h2 id="the-course-behind-it">The Course Behind It</h2>
+
+<p>This one didn’t come from a jam or a class — it came from a course I asked Claude to build for me. I wanted to actually learn assembly and get a real understanding of systems design, so I asked for something structured like a college course: lectures, problem sets, assignments, tests, exams, the whole format. Mini-WC was the final project for that course.</p>
+
+<h2 id="what-it-does">What It Does</h2>
+
+<p>Mini-WC is exactly what it sounds like — a stripped-down version of the Linux <code class="language-plaintext highlighter-rouge">wc</code> utility, written in x86 assembly using FASM. Real <code class="language-plaintext highlighter-rouge">wc</code> counts lines, words, characters, and bytes. Mine only counts bytes — hence <em>mini</em>.</p>
+
+<p>Small scope, on purpose. At this level, even “just count bytes” is a real exercise in low-level programming, with none of the abstractions a higher-level language would normally hide from you.</p>
+
+<h2 id="the-hard-part">The Hard Part</h2>
+
+<p>Assembly doesn’t forgive vague debugging. There’s no stepping through readable variable names or clean error messages — just registers, memory addresses, and instructions.</p>
+
+<ul>
+  <li><strong>Debugging</strong> meant going line by line, watching what was actually sitting in each register at every step, and piecing together what the code was doing versus what I intended it to do. Hours of that.</li>
+  <li><strong>Efficiency</strong> was its own battle — early versions had plenty of redundant lines doing work that didn’t need to happen at all.</li>
+  <li><strong>Memory leaks</strong> showed up more than once, and each one had to be tracked down and fixed by hand, since nothing here cleans up after you automatically.</li>
+</ul>
+
+<h2 id="why-it-mattered">Why It Mattered</h2>
+
+<p>Mini-WC is small in scope, but it’s the project that actually forced me to understand what’s happening underneath the languages I normally write in — registers, memory, and the raw mechanics of a program instead of the abstractions built on top of them.</p>]]></content><author><name>matheus</name></author><category term="projects" /><category term="programming" /><category term="development" /><category term="utility" /><category term="system" /><summary type="html"><![CDATA[A minimal recreation of the Linux wc utility, written in x86 assembly, built to learn low-level systems programming and memory management.]]></summary></entry><entry><title type="html">Last Ember</title><link href="http://localhost:4000/projects/last-ember" rel="alternate" type="text/html" title="Last Ember" /><published>2026-01-10T00:00:00+00:00</published><updated>2026-01-10T00:00:00+00:00</updated><id>http://localhost:4000/projects/last-ember</id><content type="html" xml:base="http://localhost:4000/projects/last-ember"><![CDATA[<h2 id="the-constraint">The Constraint</h2>
+
+<p>Last Ember came out of a game jam, built with a small team. My role covered both development and art — and it was the art that ended up eating most of the clock.</p>
+
+<p>Everything was hand-drawn, digitally, and stylized to look like paper. It came out looking exactly the way I wanted — genuinely one of the best-looking things I’ve made — but that quality had a cost. Every asset took real time to get right, which meant the programming side got squeezed into whatever time was left.</p>
+
+<h2 id="designing-around-less-time">Designing Around Less Time</h2>
+
+<p>With the clock working against us, the approach was simple: break the game down to its core building blocks, and build <em>those</em> well instead of spreading thin across a longer feature list.</p>
+
+<ul>
+  <li>Not every planned feature made it in</li>
+  <li>The features that <em>did</em> make it in got the attention they needed to actually work well</li>
+</ul>
+
+<h2 id="the-feature-im-proudest-of">The Feature I’m Proudest Of</h2>
+
+<p>The standout system, and the one I put the most care into, was the <strong>event system</strong>. Random events would trigger during a run and cause your fire to burn out faster — pushing you closer to losing:</p>
+
+<ul>
+  <li>Rain</li>
+  <li>Storms</li>
+  <li>Wind</li>
+</ul>
+
+<p>Each one added pressure in a different way, and together they made every run feel a little different depending on what the game threw at you. It was the piece that made the “survive as long as you can” loop actually feel alive instead of static.</p>
+
+<h2 id="what-i-learned">What I Learned</h2>
+
+<p>Working under a hard deadline, split between two very different disciplines (art and code), taught me a lot about prioritization — figuring out what actually needed to be perfect versus what just needed to work. It also meant working closely with a team under pressure, which was its own kind of practice: going from a rough prototype to something that felt like a finished game, together, in a short window of time.</p>]]></content><author><name>matheus</name></author><category term="projects" /><category term="game" /><category term="programming" /><category term="development" /><category term="game-jam" /><summary type="html"><![CDATA[A fast-paced 2D survival game built for a game jam, featuring hand-drawn paper-style art and a random event system that threatens your fire.]]></summary></entry><entry><title type="html">Todo App</title><link href="http://localhost:4000/projects/todo-app" rel="alternate" type="text/html" title="Todo App" /><published>2025-07-04T00:00:00+00:00</published><updated>2025-07-04T00:00:00+00:00</updated><id>http://localhost:4000/projects/todo-app</id><content type="html" xml:base="http://localhost:4000/projects/todo-app"><![CDATA[<h2 id="the-assignment">The Assignment</h2>
+
+<p>CS50 ends with a final project — build something real, using what the course actually taught. No fixed spec, just a requirement to show you could put the pieces together yourself. I went with something practical: a TODO app.</p>
+
+<h2 id="what-i-built">What I Built</h2>
+
+<p>It wasn’t just a basic task list. Alongside the standard CRUD features, I built:</p>
+
+<ul>
+  <li>A full <strong>user system</strong> — accounts, authentication, the works</li>
+  <li><strong>Shared task boards</strong>, so users could collaborate on the same list instead of just managing their own</li>
+</ul>
+
+<p>The whole thing ran on <strong>Python and Flask</strong>, which was also my first real project outside a game engine — no Unity UI, no editor, just code and a keyboard. That alone made it feel like a different kind of building.</p>
+
+<h2 id="the-hard-part">The Hard Part</h2>
+
+<p>The sharing system was where things got genuinely tricky. Basic CRUD is one thing — a single user managing their own data is a fairly contained problem. But once multiple users needed to see and edit the <em>same</em> board, a few new problems showed up:</p>
+
+<ul>
+  <li>Structuring the database so boards could belong to multiple users, not just one</li>
+  <li>Making sure permissions and access were actually enforced, not just assumed</li>
+  <li>Keeping the logic clean enough that adding “sharing” didn’t turn into a tangle of special cases layered on top of the basic task features</li>
+</ul>
+
+<p>Getting that right took more thought than anything else in the project — but it’s also what made the app feel like something more than a tutorial clone.</p>
+
+<h2 id="what-it-led-to">What It Led To</h2>
+
+<p>The TODO app was a one-off for a course, and once it was submitted, I went back to game dev for a while. But it planted something: building outside of a game engine, writing straight code with nothing but a keyboard, felt good in a way I hadn’t expected. That itch eventually led to <a href="/projects/chat-plus-plus">Chat++</a> — a much bigger step into general software development.</p>]]></content><author><name>matheus</name></author><category term="projects" /><category term="programming" /><category term="development" /><category term="utility" /><category term="web-app" /><category term="cloud" /><summary type="html"><![CDATA[A collaborative task management web app built with Python and Flask, featuring user accounts and shared task boards, built for CS50's final project.]]></summary></entry><entry><title type="html">Space Game</title><link href="http://localhost:4000/projects/space-game" rel="alternate" type="text/html" title="Space Game" /><published>2025-05-12T00:00:00+00:00</published><updated>2025-05-12T00:00:00+00:00</updated><id>http://localhost:4000/projects/space-game</id><content type="html" xml:base="http://localhost:4000/projects/space-game"><![CDATA[<h2 id="the-assignment">The Assignment</h2>
+
+<p>This one came out of Grade 9 Technology — the required intro course before Computer Science in Grades 10 through 12. It’s not a programming class specifically, and the default tool for the final project was Scratch. I hate Scratch. Block-based coding is limiting, and I’ve always preferred typing code over dragging blocks around with a mouse.</p>
+
+<p>So I asked my teacher if I could use Unity instead. She said yes — and that decision made a pretty big difference in what I was able to build.</p>
+
+<h2 id="what-i-built">What I Built</h2>
+
+<p>A retro-style shooter, built in Unity with C#. The retro look comes from a pixelation filter applied over the whole game, giving it that low-res, old-school feel without actually building low-res assets.</p>
+
+<p>Two systems ended up being the real substance of the project:</p>
+
+<ul>
+  <li><strong>An upgrade/shop system</strong> — connecting individual upgrades to the specific parts of the game they affected, and handling the transitions between gameplay and the shop cleanly</li>
+  <li><strong>A wave system</strong> — checkpoint-based, spawning different enemy types randomly at each stage</li>
+</ul>
+
+<h2 id="the-hard-part">The Hard Part</h2>
+
+<p>The upgrade system was the most involved piece by far. It wasn’t just adding items to a shop — I had to:</p>
+
+<ul>
+  <li>Design the shop itself, front to back</li>
+  <li>Wire each upgrade to the exact game systems it was supposed to affect</li>
+  <li>Handle the transitions between game → shop → game without breaking state</li>
+</ul>
+
+<p>That took real thought to plan out properly, and by the deadline I’d only managed to implement 3 upgrades — there just wasn’t time for more.</p>
+
+<p>The wave system was more approachable, but it was still a first for me — I’d never built a checkpoint-based wave spawner with randomized enemy types before, so there was a real learning curve even though it came together more smoothly than the shop did.</p>
+
+<h2 id="how-it-landed">How It Landed</h2>
+
+<p>Since everyone else in the class was working in Scratch, the gap in complexity was obvious. More detail, more systems actually talking to each other, a genre and style nobody else attempted — it ended up being the class favorite, by a clear margin.</p>]]></content><author><name>matheus</name></author><category term="projects" /><category term="game" /><category term="programming" /><category term="development" /><category term="game-jam" /><summary type="html"><![CDATA[A retro pixelated 2D/3D shooter built in Unity for a Grade 9 technology course, featuring a custom upgrade system and wave-based enemy spawning.]]></summary></entry></feed>
