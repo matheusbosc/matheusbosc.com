@@ -17,7 +17,20 @@
 
     <link href="/assets/styles/main.css" rel="stylesheet">
     <link href="/assets/styles/transition.css" rel="stylesheet">
-    <script type="module" src="/assets/js/swup.js"></script>
+    <script type="module">
+        import Swup from 'https://unpkg.com/swup@4?module';
+
+        const swup = new Swup({
+            containers: ["#swup"]
+        });
+    </script>
+
+    <script>
+        window.openImageModal = function (src, name) {
+            document.getElementById('image-modal-img').src = src;
+            document.getElementById('image-modal-title').textContent = name;
+        }
+    </script>
     <script src="https://kit.fontawesome.com/cd4cf30464.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/assets/images/icon.png">
 
@@ -91,7 +104,9 @@
     <div class="container mt-5 ">
       <div class="d-flex justify-content-between">
         <div class=" d-inline-flex justify-content-start">
-          <a class="btn btn-primary btn-lg px-5 me-md-2" href="/projects"><div class="pt-1">← Projects</div></a>
+          <a class="btn btn-primary btn-lg px-5 me-md-2" href="/projects">
+            <div class="pt-1">← Projects</div>
+          </a>
         </div>
         <div class=" d-inline-flex justify-content-end">
           
@@ -407,6 +422,7 @@
 
             <img src="/assets/images/projects/homelab/cover.png"
               class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              onclick="openImageModal('/assets/images/projects/homelab/cover.png', 'cover.png')"
               data-full-src="/assets/images/projects/homelab/cover.png" data-name="cover.png" data-bs-toggle="modal"
               data-bs-target="#image-modal">
 
@@ -414,6 +430,7 @@
 
             <img src="/assets/images/projects/homelab/img1.png"
               class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              onclick="openImageModal('/assets/images/projects/homelab/img1.png', 'img1.png')"
               data-full-src="/assets/images/projects/homelab/img1.png" data-name="img1.png" data-bs-toggle="modal"
               data-bs-target="#image-modal">
 
@@ -421,6 +438,7 @@
 
             <img src="/assets/images/projects/homelab/img2.png"
               class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              onclick="openImageModal('/assets/images/projects/homelab/img2.png', 'img2.png')"
               data-full-src="/assets/images/projects/homelab/img2.png" data-name="img2.png" data-bs-toggle="modal"
               data-bs-target="#image-modal">
 
@@ -428,6 +446,7 @@
 
             <img src="/assets/images/projects/homelab/img3.png"
               class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              onclick="openImageModal('/assets/images/projects/homelab/img3.png', 'img3.png')"
               data-full-src="/assets/images/projects/homelab/img3.png" data-name="img3.png" data-bs-toggle="modal"
               data-bs-target="#image-modal">
 
@@ -435,6 +454,7 @@
 
             <img src="/assets/images/projects/homelab/img4.png"
               class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              onclick="openImageModal('/assets/images/projects/homelab/img4.png', 'img4.png')"
               data-full-src="/assets/images/projects/homelab/img4.png" data-name="img4.png" data-bs-toggle="modal"
               data-bs-target="#image-modal">
 
@@ -442,6 +462,7 @@
 
             <img src="/assets/images/projects/homelab/img5.png"
               class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              onclick="openImageModal('/assets/images/projects/homelab/img5.png', 'img5.png')"
               data-full-src="/assets/images/projects/homelab/img5.png" data-name="img5.png" data-bs-toggle="modal"
               data-bs-target="#image-modal">
 
@@ -509,21 +530,10 @@
     </footer>
 </div>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const thumbs = document.querySelectorAll('.project-thumb');
-      const modalImg = document.getElementById('image-modal-img');
-      const modalTitle = document.getElementById('image-modal-title');
 
-      thumbs.forEach(function (thumb) {
-        thumb.addEventListener('click', function () {
-          modalImg.src = thumb.dataset.fullSrc;
-          modalTitle.textContent = thumb.dataset.name;
-        });
-      });
-    });
-  </script>
   </div>
+
+  
 </body>
 
 </html>

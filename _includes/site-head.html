@@ -14,7 +14,20 @@
 
     <link href="/assets/styles/main.css" rel="stylesheet">
     <link href="/assets/styles/transition.css" rel="stylesheet">
-    <script type="module" src="/assets/js/swup.js"></script>
+    <script type="module">
+        import Swup from 'https://unpkg.com/swup@4?module';
+
+        const swup = new Swup({
+            containers: ["#swup"]
+        });
+    </script>
+
+    <script>
+        window.openImageModal = function (src, name) {
+            document.getElementById('image-modal-img').src = src;
+            document.getElementById('image-modal-title').textContent = name;
+        }
+    </script>
     <script src="https://kit.fontawesome.com/cd4cf30464.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/assets/images/icon.png">
 
