@@ -14,10 +14,13 @@
     <!-- SEO STUFF -->
 
     <!-- OTHER STUFF -->
-    
+
     <link href="/assets/styles/main.css" rel="stylesheet">
+    <link href="/assets/styles/transition.css" rel="stylesheet">
+    <script type="module" src="/assets/js/swup.js"></script>
     <script src="https://kit.fontawesome.com/cd4cf30464.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/assets/images/icon.png">
+
 
     <!-- Begin Jekyll SEO tag v2.9.0 -->
 <title>Todo App | Matheus Boscariol</title>
@@ -39,10 +42,13 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"matheus"},"dateModified":"2025-07-04T00:00:00+00:00","datePublished":"2025-07-04T00:00:00+00:00","description":"A collaborative task management web app built with Python and Flask, featuring user accounts and shared task boards, built for CS50’s final project.","headline":"Todo App","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/todo-app"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icon.png"},"name":"matheus"},"url":"http://localhost:4000/projects/todo-app"}</script>
 <!-- End Jekyll SEO tag -->
 
+
+    
 </head>
 
 <body>
-  <div class="full-width container header-bg">
+  <div id="swup" class="transition-main body">
+    <div class="full-width container header-bg">
         <header
             class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 px-3 full-width">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none">
@@ -70,64 +76,66 @@
             </div>
         </header>
 </div>
-  <!--Add header, project info, and that stuff here-->
+    <!--Add header, project info, and that stuff here-->
 
-  <div id="hero" class="header-bg full-width">
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="align-items-center g-5 py-3">
-        <h1 class="display-2 fw-bold lh-1 mb-3 text-center">Todo App</h1>
+    <div id="hero" class="header-bg full-width">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="align-items-center g-5 py-3">
+          <h1 class="display-2 fw-bold lh-1 mb-3 text-center">Todo App</h1>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Return BTN / Back BTN-->
+    <!-- Return BTN / Back BTN-->
 
-  <div class="container mt-5 align-items-center d-inline-flex justify-content-between">
-    <div class=" d-inline-flex justify-content-start">
-      <button class="btn btn-primary btn-lg px-5 me-md-2" onclick="history.back()">← Back</button>
+    <div class="container mt-5 ">
+      <div class="d-flex justify-content-between">
+        <div class=" d-inline-flex justify-content-start">
+          <a class="btn btn-primary btn-lg px-5 me-md-2" href="/projects"><div class="pt-1">← Projects</div></a>
+        </div>
+        <div class=" d-inline-flex justify-content-end">
+          
+
+          
+          
+
+
+
+          <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="https://github.com/matheusbosc/todo-app" target="_blank">
+            <i class="col col-auto pb-2 pt-2 fa-brands fa-github fa-width-auto d-flex px-2"
+              style="font-size: 1.2em;"></i>
+
+            <div class="col col-auto pt-1 ps-2">Github Repo</div>
+          </a>
+
+
+
+          
+
+          
+          
+
+
+
+          <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="https://github.com/matheusbosc/todo-app/pkgs/container/todo-app" target="_blank">
+            <i class="col col-auto pb-2 pt-2 fa-brands fa-github fa-width-auto d-flex px-2"
+              style="font-size: 1.2em;"></i>
+
+            <div class="col col-auto pt-1 ps-2">GHRC Container</div>
+          </a>
+
+
+
+          
+
+          
+
+          
+        </div>
+      </div>
     </div>
-    <div class=" d-inline-flex justify-content-end">
-      
 
-      
-      
-
-
-
-      <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="https://github.com/matheusbosc/todo-app" target="_blank">
-        <i class="col col-auto pb-2 pt-2 fa-brands fa-github fa-width-auto d-flex px-2"
-          style="font-size: 1.2em;"></i>
-
-        <div class="col col-auto pt-1 ps-2">Github Repo</div>
-      </a>
-
-
-
-       <!-- ERROR HERE -->
-
-      
-      
-
-
-
-      <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="https://github.com/matheusbosc/todo-app/pkgs/container/todo-app" target="_blank">
-        <i class="col col-auto pb-2 pt-2 fa-brands fa-github fa-width-auto d-flex px-2"
-          style="font-size: 1.2em;"></i>
-
-        <div class="col col-auto pt-1 ps-2">GHRC Container</div>
-      </a>
-
-
-
-       <!-- ERROR HERE -->
-
-      
-
-      
-    </div>
-  </div>
-
-  <!-- Project Info:
+    <!-- Project Info:
       
       Platform
       Role
@@ -138,288 +146,288 @@
   
   -->
 
-  <div id="info" class="full-width">
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="align-items-center g-5 py-3">
+    <div id="info" class="full-width">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="align-items-center g-5 py-3">
 
-        <!-- Stack and Tags-->
-        <div class="marquee-wrapper">
-          <div class="marquee-track">
+          <!-- Stack and Tags-->
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
 
-            <div class="marquee-group">
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4 ">
-                Stack:
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Python
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Flask
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                SQL
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Bootstrap CSS
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Docker
-              </div>
-              
+              <div class="marquee-group">
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4 ">
+                  Stack:
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Python
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Flask
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  SQL
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Bootstrap CSS
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Docker
+                </div>
+                
 
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Tags:
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Tags:
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  programming
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  development
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  utility
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  web-app
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  cloud
+                </div>
+                
               </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                programming
+
+              <div class="marquee-group">
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Stack:
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Python
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Flask
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  SQL
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Bootstrap CSS
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Docker
+                </div>
+                
+
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Tags:
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  programming
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  development
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  utility
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  web-app
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  cloud
+                </div>
+                
               </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                development
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                utility
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                web-app
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                cloud
-              </div>
-              
+
             </div>
-
-            <div class="marquee-group">
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Stack:
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Python
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Flask
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                SQL
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Bootstrap CSS
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Docker
-              </div>
-              
-
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Tags:
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                programming
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                development
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                utility
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                web-app
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                cloud
-              </div>
-              
-            </div>
-
           </div>
-        </div>
 
-        <br>
+          <br>
 
-        <!-- Platforms, role, status, and maybe important dates-->
+          <!-- Platforms, role, status, and maybe important dates-->
 
-        <div class="marquee-wrapper">
-          <div class="marquee-track">
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
 
-            <div class="marquee-group">
-              
+              <div class="marquee-group">
+                
 
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">Developer</div>
-              </div>
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">Developer</div>
+                </div>
 
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Platform(s): </strong>
                 
 
                 
 
-                <div class="ps-2">Web</div>
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Platform(s): </strong>
+                  
+
+                  
+
+                  <div class="ps-2">Web</div>
+
+                  
+
+                  
+                </div>
 
                 
 
                 
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">Completed</div>
+                </div>
+
+                
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Completed: </strong>
+                  <div class="ps-2">2025-07-04</div>
+                </div>
+
+                
               </div>
 
-              
+              <div class="marquee-group">
+                
 
-              
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">Developer</div>
+                </div>
 
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">Completed</div>
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Platform(s): </strong>
+                  
+
+                  
+
+                  <div class="ps-2">Web</div>
+
+                  
+
+                  
+                </div>
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">Completed</div>
+                </div>
+
+                
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Completed: </strong>
+                  <div class="ps-2">2025-07-04</div>
+                </div>
+
+                
               </div>
 
-              
+              <div class="marquee-group">
+                
 
-              
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">Developer</div>
+                </div>
 
-              
+                
 
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Completed: </strong>
-                <div class="ps-2">2025-07-04</div>
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Platform(s): </strong>
+                  
+
+                  
+
+                  <div class="ps-2">Web</div>
+
+                  
+
+                  
+                </div>
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">Completed</div>
+                </div>
+
+                
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Completed: </strong>
+                  <div class="ps-2">2025-07-04</div>
+                </div>
+
+                
               </div>
 
-              
             </div>
-
-            <div class="marquee-group">
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">Developer</div>
-              </div>
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Platform(s): </strong>
-                
-
-                
-
-                <div class="ps-2">Web</div>
-
-                
-
-                
-              </div>
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">Completed</div>
-              </div>
-
-              
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Completed: </strong>
-                <div class="ps-2">2025-07-04</div>
-              </div>
-
-              
-            </div>
-
-            <div class="marquee-group">
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">Developer</div>
-              </div>
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Platform(s): </strong>
-                
-
-                
-
-                <div class="ps-2">Web</div>
-
-                
-
-                
-              </div>
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">Completed</div>
-              </div>
-
-              
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Completed: </strong>
-                <div class="ps-2">2025-07-04</div>
-              </div>
-
-              
-            </div>
-
           </div>
+
+
+
         </div>
-
-
-
       </div>
     </div>
-  </div>
 
 
-  <div id="content" class="full-width">
-    <div class="container col-xxl-8 px-4 pb-5">
-      <div class="row">
-        <div class="col col-8 align-items-center pb-3">
-          <article class="project" style="flex: 1;">
-            <h2 id="the-assignment">The Assignment</h2>
+    <div id="content" class="full-width">
+      <div class="container col-xxl-8 px-4 pb-5">
+        <div class="row">
+          <div class="col col-8 align-items-center pb-3">
+            <article class="project" style="flex: 1;">
+              <h2 id="the-assignment">The Assignment</h2>
 
 <p>CS50 ends with a final project — build something real, using what the course actually taught. No fixed spec, just a requirement to show you could put the pieces together yourself. I went with something practical: a TODO app.</p>
 
@@ -450,60 +458,66 @@
 
 <p>The TODO app was a one-off for a course, and once it was submitted, I went back to game dev for a while. But it planted something: building outside of a game engine, writing straight code with nothing but a keyboard, felt good in a way I hadn’t expected. That itch eventually led to <a href="/projects/chat-plus-plus">Chat++</a> — a much bigger step into general software development.</p>
 
-          </article>
-        </div>
+            </article>
+          </div>
 
-        <div class="col">
-          
+          <div class="col">
+            
 
-          <img src="/assets/images/projects/todo-app/cover.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/todo-app/cover.png" data-name="cover.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/todo-app/cover.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/todo-app/cover.png" data-name="cover.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
 
-          <img src="/assets/images/projects/todo-app/img1.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/todo-app/img1.png" data-name="img1.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/todo-app/img1.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/todo-app/img1.png" data-name="img1.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
 
-          <img src="/assets/images/projects/todo-app/img2.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/todo-app/img2.png" data-name="img2.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/todo-app/img2.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/todo-app/img2.png" data-name="img2.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
 
-          <img src="/assets/images/projects/todo-app/img3.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/todo-app/img3.png" data-name="img3.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/todo-app/img3.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/todo-app/img3.png" data-name="img3.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="modal" id="image-modal">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content image-modal">
+    <div class="modal" id="image-modal">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content image-modal">
 
-        <div class="px-5 pt-5 d-inline-flex justify-content-between">
-          <h4 class="display-5" id="image-modal-title">Image Name</h4>
-          <a class="link-light text-decoration-none cursor-pointer" data-bs-dismiss="modal"><i class="col col-auto pb-2 fa-regular fa-circle-xmark fa-width-auto d-flex px-2 pt-2" style="font-size: 2em;"></i></a>
+          <div class="px-5 pt-5 d-inline-flex justify-content-between">
+            <h4 class="display-5" id="image-modal-title">Image Name</h4>
+            <a class="link-light text-decoration-none cursor-pointer" data-bs-dismiss="modal"><i
+                class="col col-auto pb-2 fa-regular fa-circle-xmark fa-width-auto d-flex px-2 pt-2"
+                style="font-size: 2em;"></i></a>
+          </div>
+
+          <div class="modal-body d-flex justify-content-center align-items-center">
+            <img style="width: 70%; height: 70%; object-fit: contain;" id="image-modal-img" src="">
+          </div>
+
         </div>
-
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <img style="width: 70%; height: 70%; object-fit: contain;" id="image-modal-img" src="">
-        </div>
-
       </div>
     </div>
-  </div>
 
 
-  <div class="border-top full-width container accent-bg" style="border-color: #4967dd !important;">
+    <div class="border-top full-width container accent-bg" style="border-color: #4967dd !important;">
     <footer
         class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3 py-5 px-3 full-width">
 
@@ -540,7 +554,7 @@
     </footer>
 </div>
 
-  <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
       const thumbs = document.querySelectorAll('.project-thumb');
       const modalImg = document.getElementById('image-modal-img');
@@ -554,6 +568,7 @@
       });
     });
   </script>
+  </div>
 </body>
 
 </html>

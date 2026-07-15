@@ -14,10 +14,13 @@
     <!-- SEO STUFF -->
 
     <!-- OTHER STUFF -->
-    
+
     <link href="/assets/styles/main.css" rel="stylesheet">
+    <link href="/assets/styles/transition.css" rel="stylesheet">
+    <script type="module" src="/assets/js/swup.js"></script>
     <script src="https://kit.fontawesome.com/cd4cf30464.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/assets/images/icon.png">
+
 
     <!-- Begin Jekyll SEO tag v2.9.0 -->
 <title>Homelab | Matheus Boscariol</title>
@@ -39,10 +42,13 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"matheus"},"dateModified":"2026-07-09T00:00:00+00:00","datePublished":"2026-07-09T00:00:00+00:00","description":"A self-hosted infrastructure playground running containerized services, CI/CD pipelines, and secure Cloudflare-tunneled access.","headline":"Homelab","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/homelab"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icon.png"},"name":"matheus"},"url":"http://localhost:4000/projects/homelab"}</script>
 <!-- End Jekyll SEO tag -->
 
+
+    
 </head>
 
 <body>
-  <div class="full-width container header-bg">
+  <div id="swup" class="transition-main body">
+    <div class="full-width container header-bg">
         <header
             class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 px-3 full-width">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none">
@@ -70,28 +76,30 @@
             </div>
         </header>
 </div>
-  <!--Add header, project info, and that stuff here-->
+    <!--Add header, project info, and that stuff here-->
 
-  <div id="hero" class="header-bg full-width">
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="align-items-center g-5 py-3">
-        <h1 class="display-2 fw-bold lh-1 mb-3 text-center">Homelab</h1>
+    <div id="hero" class="header-bg full-width">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="align-items-center g-5 py-3">
+          <h1 class="display-2 fw-bold lh-1 mb-3 text-center">Homelab</h1>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Return BTN / Back BTN-->
+    <!-- Return BTN / Back BTN-->
 
-  <div class="container mt-5 align-items-center d-inline-flex justify-content-between">
-    <div class=" d-inline-flex justify-content-start">
-      <button class="btn btn-primary btn-lg px-5 me-md-2" onclick="history.back()">← Back</button>
+    <div class="container mt-5 ">
+      <div class="d-flex justify-content-between">
+        <div class=" d-inline-flex justify-content-start">
+          <a class="btn btn-primary btn-lg px-5 me-md-2" href="/projects"><div class="pt-1">← Projects</div></a>
+        </div>
+        <div class=" d-inline-flex justify-content-end">
+          
+        </div>
+      </div>
     </div>
-    <div class=" d-inline-flex justify-content-end">
-      
-    </div>
-  </div>
 
-  <!-- Project Info:
+    <!-- Project Info:
       
       Platform
       Role
@@ -102,235 +110,235 @@
   
   -->
 
-  <div id="info" class="full-width">
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="align-items-center g-5 py-3">
+    <div id="info" class="full-width">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="align-items-center g-5 py-3">
 
-        <!-- Stack and Tags-->
-        <div class="marquee-wrapper">
-          <div class="marquee-track">
+          <!-- Stack and Tags-->
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
 
-            <div class="marquee-group">
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4 ">
-                Stack:
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Linux
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Docker
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Cloudflare
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Reverse Proxies
-              </div>
-              
+              <div class="marquee-group">
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4 ">
+                  Stack:
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Linux
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Docker
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Cloudflare
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Reverse Proxies
+                </div>
+                
 
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Tags:
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Tags:
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  infrastructure
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  cloud
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  devops
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  server
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  linux
+                </div>
+                
               </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                infrastructure
+
+              <div class="marquee-group">
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Stack:
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Linux
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Docker
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Cloudflare
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  Reverse Proxies
+                </div>
+                
+
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Tags:
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  infrastructure
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  cloud
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  devops
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  server
+                </div>
+                
+                <div class="d-inline-flex small-tag-tile">
+                  linux
+                </div>
+                
               </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                cloud
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                devops
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                server
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                linux
-              </div>
-              
+
             </div>
-
-            <div class="marquee-group">
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Stack:
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Linux
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Docker
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Cloudflare
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                Reverse Proxies
-              </div>
-              
-
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Tags:
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                infrastructure
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                cloud
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                devops
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                server
-              </div>
-              
-              <div class="d-inline-flex small-tag-tile">
-                linux
-              </div>
-              
-            </div>
-
           </div>
-        </div>
 
-        <br>
+          <br>
 
-        <!-- Platforms, role, status, and maybe important dates-->
+          <!-- Platforms, role, status, and maybe important dates-->
 
-        <div class="marquee-wrapper">
-          <div class="marquee-track">
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
 
-            <div class="marquee-group">
-              
+              <div class="marquee-group">
+                
 
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">Maintainer</div>
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">Maintainer</div>
+                </div>
+
+                
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">Ongoing</div>
+                </div>
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Started: </strong>
+                  <div class="ps-2">2023-12-02</div>
+                </div>
+
+                
+
+                
               </div>
 
-              
+              <div class="marquee-group">
+                
 
-              
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">Maintainer</div>
+                </div>
 
-              
+                
 
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">Ongoing</div>
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">Ongoing</div>
+                </div>
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Started: </strong>
+                  <div class="ps-2">2023-12-02</div>
+                </div>
+
+                
+
+                
               </div>
 
-              
+              <div class="marquee-group">
+                
 
-              
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">Maintainer</div>
+                </div>
 
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Started: </strong>
-                <div class="ps-2">2023-12-02</div>
+                
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">Ongoing</div>
+                </div>
+
+                
+
+                
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Started: </strong>
+                  <div class="ps-2">2023-12-02</div>
+                </div>
+
+                
+
+                
               </div>
 
-              
-
-              
             </div>
-
-            <div class="marquee-group">
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">Maintainer</div>
-              </div>
-
-              
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">Ongoing</div>
-              </div>
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Started: </strong>
-                <div class="ps-2">2023-12-02</div>
-              </div>
-
-              
-
-              
-            </div>
-
-            <div class="marquee-group">
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">Maintainer</div>
-              </div>
-
-              
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">Ongoing</div>
-              </div>
-
-              
-
-              
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Started: </strong>
-                <div class="ps-2">2023-12-02</div>
-              </div>
-
-              
-
-              
-            </div>
-
           </div>
+
+
+
         </div>
-
-
-
       </div>
     </div>
-  </div>
 
 
-  <div id="content" class="full-width">
-    <div class="container col-xxl-8 px-4 pb-5">
-      <div class="row">
-        <div class="col col-8 align-items-center pb-3">
-          <article class="project" style="flex: 1;">
-            <h2 id="how-it-started">How It Started</h2>
+    <div id="content" class="full-width">
+      <div class="container col-xxl-8 px-4 pb-5">
+        <div class="row">
+          <div class="col col-8 align-items-center pb-3">
+            <article class="project" style="flex: 1;">
+              <h2 id="how-it-started">How It Started</h2>
 
 <p>It started small — Jellyfin, set up to stop manually organizing my media library by hand. For a while, that was the whole homelab. One service, doing one job.</p>
 
@@ -391,72 +399,80 @@
 
 <p>It’s not a big setup, but it works — and I’m hoping to keep expanding it over time.</p>
 
-          </article>
-        </div>
+            </article>
+          </div>
 
-        <div class="col">
-          
+          <div class="col">
+            
 
-          <img src="/assets/images/projects/homelab/cover.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/homelab/cover.png" data-name="cover.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/homelab/cover.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/homelab/cover.png" data-name="cover.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
 
-          <img src="/assets/images/projects/homelab/img1.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/homelab/img1.png" data-name="img1.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/homelab/img1.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/homelab/img1.png" data-name="img1.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
 
-          <img src="/assets/images/projects/homelab/img2.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/homelab/img2.png" data-name="img2.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/homelab/img2.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/homelab/img2.png" data-name="img2.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
 
-          <img src="/assets/images/projects/homelab/img3.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/homelab/img3.png" data-name="img3.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/homelab/img3.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/homelab/img3.png" data-name="img3.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
 
-          <img src="/assets/images/projects/homelab/img4.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/homelab/img4.png" data-name="img4.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/homelab/img4.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/homelab/img4.png" data-name="img4.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
 
-          <img src="/assets/images/projects/homelab/img5.png" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/homelab/img5.png" data-name="img5.png" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
+            <img src="/assets/images/projects/homelab/img5.png"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/homelab/img5.png" data-name="img5.png" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
 
-          
+            
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="modal" id="image-modal">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content image-modal">
+    <div class="modal" id="image-modal">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content image-modal">
 
-        <div class="px-5 pt-5 d-inline-flex justify-content-between">
-          <h4 class="display-5" id="image-modal-title">Image Name</h4>
-          <a class="link-light text-decoration-none cursor-pointer" data-bs-dismiss="modal"><i class="col col-auto pb-2 fa-regular fa-circle-xmark fa-width-auto d-flex px-2 pt-2" style="font-size: 2em;"></i></a>
+          <div class="px-5 pt-5 d-inline-flex justify-content-between">
+            <h4 class="display-5" id="image-modal-title">Image Name</h4>
+            <a class="link-light text-decoration-none cursor-pointer" data-bs-dismiss="modal"><i
+                class="col col-auto pb-2 fa-regular fa-circle-xmark fa-width-auto d-flex px-2 pt-2"
+                style="font-size: 2em;"></i></a>
+          </div>
+
+          <div class="modal-body d-flex justify-content-center align-items-center">
+            <img style="width: 70%; height: 70%; object-fit: contain;" id="image-modal-img" src="">
+          </div>
+
         </div>
-
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <img style="width: 70%; height: 70%; object-fit: contain;" id="image-modal-img" src="">
-        </div>
-
       </div>
     </div>
-  </div>
 
 
-  <div class="border-top full-width container accent-bg" style="border-color: #4967dd !important;">
+    <div class="border-top full-width container accent-bg" style="border-color: #4967dd !important;">
     <footer
         class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3 py-5 px-3 full-width">
 
@@ -493,7 +509,7 @@
     </footer>
 </div>
 
-  <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
       const thumbs = document.querySelectorAll('.project-thumb');
       const modalImg = document.getElementById('image-modal-img');
@@ -507,6 +523,7 @@
       });
     });
   </script>
+  </div>
 </body>
 
 </html>

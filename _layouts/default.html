@@ -3,14 +3,16 @@
 
 {% include site-head.html %}
 
-<body>
-    {% include header.html %}
+<body >
+    <div id="swup" class="transition-main">
+        {% include header.html %}
 
-    <main style="flex: 1;">
+    <main  style="flex: 1;">
         {{ content }}
     </main>
 
     {% include footer.html %}
+    </div>
 </body>
 
 </html>

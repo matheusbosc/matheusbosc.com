@@ -32,6 +32,23 @@ body {
   font-style: normal;
 }
 
+.body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  flex-direction: column;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(125deg, var(--bs-dark-1) 0%, var(--bs-dark-2) 50%, var(--bs-dark-1) 100%) !important;
+    color: var(--light-text);
+
+    font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .link-tertiary{
   color: #9098b7;
 }

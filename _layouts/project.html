@@ -4,61 +4,64 @@
 {% include site-head.html %}
 
 <body>
-  {% include header.html %}
-  <!--Add header, project info, and that stuff here-->
+  <div id="swup" class="transition-main body">
+    {% include header.html %}
+    <!--Add header, project info, and that stuff here-->
 
-  <div id="hero" class="header-bg full-width">
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="align-items-center g-5 py-3">
-        <h1 class="display-2 fw-bold lh-1 mb-3 text-center">{{ page.title }}</h1>
+    <div id="hero" class="header-bg full-width">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="align-items-center g-5 py-3">
+          <h1 class="display-2 fw-bold lh-1 mb-3 text-center">{{ page.title }}</h1>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Return BTN / Back BTN-->
+    <!-- Return BTN / Back BTN-->
 
-  <div class="container mt-5 align-items-center d-inline-flex justify-content-between">
-    <div class=" d-inline-flex justify-content-start">
-      <button class="btn btn-primary btn-lg px-5 me-md-2" onclick="history.back()">← Back</button>
+    <div class="container mt-5 ">
+      <div class="d-flex justify-content-between">
+        <div class=" d-inline-flex justify-content-start">
+          <a class="btn btn-primary btn-lg px-5 me-md-2" href="/projects"><div class="pt-1">← Projects</div></a>
+        </div>
+        <div class=" d-inline-flex justify-content-end">
+          {% if page.links %}
+
+          {% for link in page.links %}
+          {% if link.icon %}
+
+
+
+          <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="{{ link.url }}" target="_blank">
+            <i class="col col-auto pb-2 pt-2 fa-brands {{ link.icon }} fa-width-auto d-flex px-2"
+              style="font-size: 1.2em;"></i>
+
+            <div class="col col-auto pt-1 ps-2">{{ link.name }}</div>
+          </a>
+
+
+
+          {% else %}
+
+
+
+          <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="{{ link.url }}" target="_blank">
+            <i class="col col-auto pb-2 fa-solid fa-globe fa-width-auto d-flex px-2 pt-2" style="font-size: 1.2em;"></i>
+
+            <div class="col col-auto ps-2 pt-1">{{ link.name }}</div>
+          </a>
+
+
+
+          {% endif %}
+
+          {% endfor %}
+
+          {% endif %}
+        </div>
+      </div>
     </div>
-    <div class=" d-inline-flex justify-content-end">
-      {% if page.links %}
 
-      {% for link in page.links %}
-      {% if link.icon %}
-
-
-
-      <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="{{ link.url }}" target="_blank">
-        <i class="col col-auto pb-2 pt-2 fa-brands {{ link.icon }} fa-width-auto d-flex px-2"
-          style="font-size: 1.2em;"></i>
-
-        <div class="col col-auto pt-1 ps-2">{{ link.name }}</div>
-      </a>
-
-
-
-      {% else %}
-
-
-
-      <a class="row d-inline-flex btn btn-primary btn-lg px-5 me-md-2 mx-2" href="{{ link.url }}" target="_blank">
-        <i class="col col-auto pb-2 fa-solid fa-globe fa-width-auto d-flex px-2 pt-2" style="font-size: 1.2em;"></i>
-
-        <div class="col col-auto ps-2 pt-1">{{ link.name }}</div>
-      </a>
-
-
-
-      {% endif %} <!-- ERROR HERE -->
-
-      {% endfor %}
-
-      {% endif %}
-    </div>
-  </div>
-
-  <!-- Project Info:
+    <!-- Project Info:
       
       Platform
       Role
@@ -69,331 +72,334 @@
   
   -->
 
-  <div id="info" class="full-width">
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="align-items-center g-5 py-3">
+    <div id="info" class="full-width">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="align-items-center g-5 py-3">
 
-        <!-- Stack and Tags-->
-        <div class="marquee-wrapper">
-          <div class="marquee-track">
+          <!-- Stack and Tags-->
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
 
-            <div class="marquee-group">
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4 ">
-                Stack:
-              </div>
-              {% for tech in page.stack %}
-              <div class="d-inline-flex small-tag-tile">
-                {{ tech }}
-              </div>
-              {% endfor %}
+              <div class="marquee-group">
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4 ">
+                  Stack:
+                </div>
+                {% for tech in page.stack %}
+                <div class="d-inline-flex small-tag-tile">
+                  {{ tech }}
+                </div>
+                {% endfor %}
 
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Tags:
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Tags:
+                </div>
+                {% for tag in page.tags %}
+                <div class="d-inline-flex small-tag-tile">
+                  {{ tag }}
+                </div>
+                {% endfor %}
               </div>
-              {% for tag in page.tags %}
-              <div class="d-inline-flex small-tag-tile">
-                {{ tag }}
+
+              <div class="marquee-group">
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Stack:
+                </div>
+                {% for tech in page.stack %}
+                <div class="d-inline-flex small-tag-tile">
+                  {{ tech }}
+                </div>
+                {% endfor %}
+
+                <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
+                  Tags:
+                </div>
+                {% for tag in page.tags %}
+                <div class="d-inline-flex small-tag-tile">
+                  {{ tag }}
+                </div>
+                {% endfor %}
               </div>
-              {% endfor %}
+
             </div>
+          </div>
 
-            <div class="marquee-group">
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Stack:
-              </div>
-              {% for tech in page.stack %}
-              <div class="d-inline-flex small-tag-tile">
-                {{ tech }}
-              </div>
-              {% endfor %}
+          <br>
 
-              <div class="d-inline-flex fs-2 align-items-center pb-1 px-4">
-                Tags:
+          <!-- Platforms, role, status, and maybe important dates-->
+
+          <div class="marquee-wrapper">
+            <div class="marquee-track">
+
+              <div class="marquee-group">
+                {% if page.role %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">{{ page.role }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.platforms %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Platform(s): </strong>
+                  {% if page.platforms.size == 1 %}
+
+                  {% for platform in page.platforms %}
+
+                  <div class="ps-2">{{ platform }}</div>
+
+                  {% endfor %}
+
+                  {% else %}
+
+                  {% for platform in page.platforms %}
+
+                  {% if platform == page.platforms.last %}
+
+                  <div class="ps-2">{{ platform }}</div>
+
+                  {% else %}
+
+                  <div class="ps-2">{{ platform }},</div>
+
+                  {% endif %}
+
+                  {% endfor %}
+
+                  {% endif %}
+                </div>
+
+                {% endif %}
+
+                {% if page.status %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">{{ page.status }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.start-date %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Started: </strong>
+                  <div class="ps-2">{{ page.start-date }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.done-date %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Completed: </strong>
+                  <div class="ps-2">{{ page.done-date }}</div>
+                </div>
+
+                {% endif %}
               </div>
-              {% for tag in page.tags %}
-              <div class="d-inline-flex small-tag-tile">
-                {{ tag }}
+
+              <div class="marquee-group">
+                {% if page.role %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">{{ page.role }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.platforms %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Platform(s): </strong>
+                  {% if page.platforms.size == 1 %}
+
+                  {% for platform in page.platforms %}
+
+                  <div class="ps-2">{{ platform }}</div>
+
+                  {% endfor %}
+
+                  {% else %}
+
+                  {% for platform in page.platforms %}
+
+                  {% if platform == page.platforms.last %}
+
+                  <div class="ps-2">{{ platform }}</div>
+
+                  {% else %}
+
+                  <div class="ps-2">{{ platform }},</div>
+
+                  {% endif %}
+
+                  {% endfor %}
+
+                  {% endif %}
+                </div>
+
+                {% endif %}
+
+                {% if page.status %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">{{ page.status }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.start-date %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Started: </strong>
+                  <div class="ps-2">{{ page.start-date }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.done-date %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Completed: </strong>
+                  <div class="ps-2">{{ page.done-date }}</div>
+                </div>
+
+                {% endif %}
               </div>
-              {% endfor %}
+
+              <div class="marquee-group">
+                {% if page.role %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Role(s): </strong>
+                  <div class="ps-2">{{ page.role }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.platforms %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Platform(s): </strong>
+                  {% if page.platforms.size == 1 %}
+
+                  {% for platform in page.platforms %}
+
+                  <div class="ps-2">{{ platform }}</div>
+
+                  {% endfor %}
+
+                  {% else %}
+
+                  {% for platform in page.platforms %}
+
+                  {% if platform == page.platforms.last %}
+
+                  <div class="ps-2">{{ platform }}</div>
+
+                  {% else %}
+
+                  <div class="ps-2">{{ platform }},</div>
+
+                  {% endif %}
+
+                  {% endfor %}
+
+                  {% endif %}
+                </div>
+
+                {% endif %}
+
+                {% if page.status %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Status: </strong>
+                  <div class="ps-2">{{ page.status }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.start-date %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Started: </strong>
+                  <div class="ps-2">{{ page.start-date }}</div>
+                </div>
+
+                {% endif %}
+
+                {% if page.done-date %}
+
+                <div class="d-inline-flex fs-4 fw-normal px-5">
+                  <strong>Date Completed: </strong>
+                  <div class="ps-2">{{ page.done-date }}</div>
+                </div>
+
+                {% endif %}
+              </div>
+
             </div>
+          </div>
 
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div id="content" class="full-width">
+      <div class="container col-xxl-8 px-4 pb-5">
+        <div class="row">
+          <div class="col col-8 align-items-center pb-3">
+            <article class="project" style="flex: 1;">
+              {{ content }}
+            </article>
+          </div>
+
+          <div class="col">
+            {% for img in page.imgs %}
+
+            <img src="/assets/images/projects/{{ page.slug }}/{{img}}"
+              class="project-thumb cursor-pointer img-fluid m-2 project-image"
+              data-full-src="/assets/images/projects/{{ page.slug }}/{{img}}" data-name="{{img}}" data-bs-toggle="modal"
+              data-bs-target="#image-modal">
+
+            {% endfor %}
           </div>
         </div>
-
-        <br>
-
-        <!-- Platforms, role, status, and maybe important dates-->
-
-        <div class="marquee-wrapper">
-          <div class="marquee-track">
-
-            <div class="marquee-group">
-              {% if page.role %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">{{ page.role }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.platforms %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Platform(s): </strong>
-                {% if page.platforms.size == 1 %}
-
-                {% for platform in page.platforms %}
-
-                <div class="ps-2">{{ platform }}</div>
-
-                {% endfor %}
-
-                {% else %}
-
-                {% for platform in page.platforms %}
-
-                {% if platform == page.platforms.last %}
-
-                <div class="ps-2">{{ platform }}</div>
-
-                {% else %}
-
-                <div class="ps-2">{{ platform }},</div>
-
-                {% endif %}
-
-                {% endfor %}
-
-                {% endif %}
-              </div>
-
-              {% endif %}
-
-              {% if page.status %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">{{ page.status }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.start-date %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Started: </strong>
-                <div class="ps-2">{{ page.start-date }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.done-date %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Completed: </strong>
-                <div class="ps-2">{{ page.done-date }}</div>
-              </div>
-
-              {% endif %}
-            </div>
-
-            <div class="marquee-group">
-              {% if page.role %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">{{ page.role }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.platforms %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Platform(s): </strong>
-                {% if page.platforms.size == 1 %}
-
-                {% for platform in page.platforms %}
-
-                <div class="ps-2">{{ platform }}</div>
-
-                {% endfor %}
-
-                {% else %}
-
-                {% for platform in page.platforms %}
-
-                {% if platform == page.platforms.last %}
-
-                <div class="ps-2">{{ platform }}</div>
-
-                {% else %}
-
-                <div class="ps-2">{{ platform }},</div>
-
-                {% endif %}
-
-                {% endfor %}
-
-                {% endif %}
-              </div>
-
-              {% endif %}
-
-              {% if page.status %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">{{ page.status }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.start-date %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Started: </strong>
-                <div class="ps-2">{{ page.start-date }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.done-date %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Completed: </strong>
-                <div class="ps-2">{{ page.done-date }}</div>
-              </div>
-
-              {% endif %}
-            </div>
-
-            <div class="marquee-group">
-              {% if page.role %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Role(s): </strong>
-                <div class="ps-2">{{ page.role }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.platforms %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Platform(s): </strong>
-                {% if page.platforms.size == 1 %}
-
-                {% for platform in page.platforms %}
-
-                <div class="ps-2">{{ platform }}</div>
-
-                {% endfor %}
-
-                {% else %}
-
-                {% for platform in page.platforms %}
-
-                {% if platform == page.platforms.last %}
-
-                <div class="ps-2">{{ platform }}</div>
-
-                {% else %}
-
-                <div class="ps-2">{{ platform }},</div>
-
-                {% endif %}
-
-                {% endfor %}
-
-                {% endif %}
-              </div>
-
-              {% endif %}
-
-              {% if page.status %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Status: </strong>
-                <div class="ps-2">{{ page.status }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.start-date %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Started: </strong>
-                <div class="ps-2">{{ page.start-date }}</div>
-              </div>
-
-              {% endif %}
-
-              {% if page.done-date %}
-
-              <div class="d-inline-flex fs-4 fw-normal px-5">
-                <strong>Date Completed: </strong>
-                <div class="ps-2">{{ page.done-date }}</div>
-              </div>
-
-              {% endif %}
-            </div>
-
+      </div>
+    </div>
+
+
+    <div class="modal" id="image-modal">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content image-modal">
+
+          <div class="px-5 pt-5 d-inline-flex justify-content-between">
+            <h4 class="display-5" id="image-modal-title">Image Name</h4>
+            <a class="link-light text-decoration-none cursor-pointer" data-bs-dismiss="modal"><i
+                class="col col-auto pb-2 fa-regular fa-circle-xmark fa-width-auto d-flex px-2 pt-2"
+                style="font-size: 2em;"></i></a>
           </div>
-        </div>
 
+          <div class="modal-body d-flex justify-content-center align-items-center">
+            <img style="width: 70%; height: 70%; object-fit: contain;" id="image-modal-img" src="">
+          </div>
 
-
-      </div>
-    </div>
-  </div>
-
-
-  <div id="content" class="full-width">
-    <div class="container col-xxl-8 px-4 pb-5">
-      <div class="row">
-        <div class="col col-8 align-items-center pb-3">
-          <article class="project" style="flex: 1;">
-            {{ content }}
-          </article>
-        </div>
-
-        <div class="col">
-          {% for img in page.imgs %}
-
-          <img src="/assets/images/projects/{{ page.slug }}/{{img}}" class="project-thumb cursor-pointer img-fluid m-2 project-image"
-            data-full-src="/assets/images/projects/{{ page.slug }}/{{img}}" data-name="{{img}}" data-bs-toggle="modal"
-            data-bs-target="#image-modal">
-
-          {% endfor %}
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="modal" id="image-modal">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content image-modal">
+    {% include footer.html %}
 
-        <div class="px-5 pt-5 d-inline-flex justify-content-between">
-          <h4 class="display-5" id="image-modal-title">Image Name</h4>
-          <a class="link-light text-decoration-none cursor-pointer" data-bs-dismiss="modal"><i class="col col-auto pb-2 fa-regular fa-circle-xmark fa-width-auto d-flex px-2 pt-2" style="font-size: 2em;"></i></a>
-        </div>
-
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <img style="width: 70%; height: 70%; object-fit: contain;" id="image-modal-img" src="">
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  {% include footer.html %}
-
-  <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
       const thumbs = document.querySelectorAll('.project-thumb');
       const modalImg = document.getElementById('image-modal-img');
@@ -407,6 +413,7 @@
       });
     });
   </script>
+  </div>
 </body>
 
 </html>
